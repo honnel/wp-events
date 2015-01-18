@@ -51,7 +51,7 @@ Installation with widget:
 1. Goto Settings > Events and configure the plugin where required.
 1. You can now go to Events > Add|edit Event to schedule events.
 1. Once an event is saved you can manage them from Events > Manage.
-1. Make a donation. It’s well appreciated!
+1. Make a donation. It√ïs well appreciated!
 
 For more instructions and additional information review the [Plugin page](http://meandmymac.net/plugins/events/2/).
 Find out how to implement Events on pages, without a widget and many more options...
