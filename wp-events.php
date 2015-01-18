@@ -15,6 +15,7 @@ include_once(ABSPATH.'wp-content/plugins/wp-events/wp-events-setup.php');
 include_once(ABSPATH.'wp-content/plugins/wp-events/wp-events-functions.php');
 include_once(ABSPATH.'wp-content/plugins/wp-events/wp-events-manage.php');
 include_once(ABSPATH.'wp-content/plugins/wp-events/wp-events-widget.php');
+include_once(ABSPATH.'wp-content/plugins/wp-events/wp-events-ics-export.php');
 
 register_activation_hook(__FILE__, 'events_activate');
 register_deactivation_hook(__FILE__, 'events_deactivate');
@@ -32,6 +33,7 @@ add_action('admin_init', 'events_editor_admin_init');
 add_action('admin_menu', 'events_dashboard', 1);
 
 add_shortcode('events_show', 'events_show');
+add_shortcode('events_ics_download', 'events_ics_download');
 
 if (isset($_POST['events_submit'])) 			add_action('init', 'events_insert_input');
 if (isset($_POST['events_category_submit'])) 	add_action('init', 'events_insert_category');
