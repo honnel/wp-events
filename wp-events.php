@@ -29,7 +29,6 @@ add_action('widgets_init', 'events_widget_sidebar_init');
 add_action('wp_dashboard_setup', 'events_widget_dashboard_init');
 
 add_action('admin_init', 'events_editor_admin_init');
-add_action('admin_head', 'events_editor_admin_head');
 add_action('admin_menu', 'events_dashboard', 1);
 
 add_shortcode('events_show', 'events_show');

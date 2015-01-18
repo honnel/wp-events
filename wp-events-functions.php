@@ -421,17 +421,6 @@ function events_editor_admin_init() {
 }
 
 /*-------------------------------------------------------------
- Name:      events_editor_admin_head
-
- Purpose:   Loads TinyMCE for adding events
- Receive:   -none-
- Return:    -none-
--------------------------------------------------------------*/
-function events_editor_admin_head() {
-  wp_tiny_mce();
-}
-
-/*-------------------------------------------------------------
  Name:      events_textdomain
 
  Purpose:   Initiates Translation files
