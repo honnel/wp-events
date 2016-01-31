@@ -10,31 +10,31 @@ function events_insert_input() {
 	global $wpdb, $userdata, $events_config, $events_language;
 
 	if(current_user_can($events_config['addlevel'])) {
-		$event_id 			= $_POST['events_event_id'];
-		$eventmsg 			= $events_language['language_past'];
-		$author 			= $_POST['events_username'];
-		$title	 			= htmlspecialchars(trim($_POST['events_title'], "\t\n "), ENT_QUOTES);
-		$title_link	 		= $_POST['events_title_link'];
-		$location 			= htmlspecialchars(trim($_POST['events_location'], "\t\n "), ENT_QUOTES);
-		$category 			= $_POST['events_category'];
-		$pre_event 			= trim($_POST['content'], "\t\n "); // specialchars done in the_editor()
-		$post_event 		= htmlspecialchars(trim($_POST['events_post_event'], "\t\n "), ENT_QUOTES);
-		$link		 		= htmlspecialchars(trim($_POST['events_link'], "\t\n "), ENT_QUOTES);
-		$allday		 		= $_POST['events_allday'];
-		$sday 				= htmlspecialchars(trim($_POST['events_sday'], "\t\n "), ENT_QUOTES);
-		$smonth 			= htmlspecialchars(trim($_POST['events_smonth'], "\t\n "), ENT_QUOTES);
-		$syear 				= htmlspecialchars(trim($_POST['events_syear'], "\t\n "), ENT_QUOTES);
-		$shour 				= htmlspecialchars(trim($_POST['events_shour'], "\t\n "), ENT_QUOTES);
-		$sminute 			= htmlspecialchars(trim($_POST['events_sminute'], "\t\n "), ENT_QUOTES);
-		$eday 				= htmlspecialchars(trim($_POST['events_eday'], "\t\n "), ENT_QUOTES);
-		$emonth 			= htmlspecialchars(trim($_POST['events_emonth'], "\t\n "), ENT_QUOTES);
-		$eyear 				= htmlspecialchars(trim($_POST['events_eyear'], "\t\n "), ENT_QUOTES);
-		$ehour 				= htmlspecialchars(trim($_POST['events_ehour'], "\t\n "), ENT_QUOTES);
-		$eminute 			= htmlspecialchars(trim($_POST['events_eminute'], "\t\n "), ENT_QUOTES);
-		$priority 			= $_POST['events_priority'];
-		$archive 			= $_POST['events_archive'];
-		$repeat_int			= $_POST['events_repeat'];
-		$repeat_every		= $_POST['events_repeat_every'];
+		if(isset($_POST['events_event_id'])) $event_id = esc_attr($_POST['events_event_id']);
+		$eventmsg = $events_language['language_past'];
+		if(isset($_POST['events_username'])) $author = esc_attr($_POST['events_username']);
+		if(isset($_POST['events_title'])) $title = htmlspecialchars(trim(esc_attr($_POST['events_title']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_title_link'])) $title_link	= esc_attr($_POST['events_title_link']);
+		if(isset($_POST['events_location'])) $location = htmlspecialchars(trim(esc_attr($_POST['events_location']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_category'])) $category = esc_attr($_POST['events_category']);
+		if(isset($_POST['content'])) $pre_event = trim(esc_attr($_POST['content']), "\t\n "); // specialchars done in the_editor()
+		if(isset($_POST['events_post_event'])) $post_event = htmlspecialchars(trim(esc_attr($_POST['events_post_event']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_link'])) $link = htmlspecialchars(trim(esc_attr($_POST['events_link']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_allday'])) $allday	= esc_attr($_POST['events_allday']);
+		if(isset($_POST['events_sday'])) $sday = htmlspecialchars(trim(esc_attr($_POST['events_sday']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_smonth'])) $smonth	= htmlspecialchars(trim(esc_attr($_POST['events_smonth']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_syear'])) $syear = htmlspecialchars(trim(esc_attr($_POST['events_syear']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_shour'])) $shour = htmlspecialchars(trim(esc_attr($_POST['events_shour']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_sminute'])) $sminute = htmlspecialchars(trim(esc_attr($_POST['events_sminute']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_eday'])) $eday = htmlspecialchars(trim(esc_attr($_POST['events_eday']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_emonth'])) $emonth = htmlspecialchars(trim(esc_attr($_POST['events_emonth']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_eyear'])) $eyear = htmlspecialchars(trim(esc_attr($_POST['events_eyear']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_ehour'])) $ehour = htmlspecialchars(trim(esc_attr($_POST['events_ehour']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_eminute'])) $eminute = htmlspecialchars(trim(esc_attr($_POST['events_eminute']), "\t\n "), ENT_QUOTES);
+		if(isset($_POST['events_priority'])) $priority = esc_attr($_POST['events_priority']);
+		if(isset($_POST['events_archive'])) $archive = esc_attr($_POST['events_archive']);
+		if(isset($_POST['events_repeat'])) $repeat_int = esc_attr($_POST['events_repeat']);
+		if(isset($_POST['events_repeat_every'])) $repeat_every = esc_attr($_POST['events_repeat_every']);
 
 		if (strlen($title) > 0 and $repeat_int <= 20) {
 			if($repeat_every == "" and $repeat_int > 0) $repeat_int = 0;
@@ -81,11 +81,11 @@ function events_insert_input() {
 
 				if(strlen($event_id) != 0 AND isset($_POST['submit_save'])) {
 					/* Update an existing event */
-					$postquery = "UPDATE `".$wpdb->prefix."events` SET `title` = '$title', `title_link` = '$title_link', `location` = '$location', `category` = '$category', `pre_message` = '$pre_event', `post_message` = '$post_event', `link` = '$link', `allday` = '$allday', `thetime` = '$startdate', `theend` = '$enddate', `priority` = '$priority', `archive` = '$archive', `author` = '$author' WHERE `id` = '$event_id'";
+					$postquery = "UPDATE `{$wpdb->prefix}events` SET `title` = '{$title}', `title_link` = '{$title_link}', `location` = '{$location}', `category` = '{$category}', `pre_message` = '{$pre_event}', `post_message` = '{$post_event}', `link` = '{$link}', `allday` = '{$allday}', `thetime` = '{$startdate}', `theend` = '{$enddate}', `priority` = '{$priority}', `archive` = '{$archive}', `author` = '{$author}' WHERE `id` = {$event_id}";
 					$action = "update";
 				} else {
 					/* New or duplicate event */
-					$postquery = "INSERT INTO `".$wpdb->prefix."events` (`title`, `title_link`, `location`, `category`, `pre_message`, `post_message`, `link`, `allday`, `thetime`, `theend`, `author`, `priority`, `archive`) VALUES ('$title', '$title_link', '$location', '$category', '$pre_event', '$post_event', '$link', '$allday', '$startdate', '$enddate', '$author', '$priority', '$archive')";
+					$postquery = "INSERT INTO `{$wpdb->prefix}events` (`title`, `title_link`, `location`, `category`, `pre_message`, `post_message`, `link`, `allday`, `thetime`, `theend`, `author`, `priority`, `archive`) VALUES ('{$title}', '{$title_link}', '{$location}', '{$category}', '{$pre_event}', '{$post_event}', '{$link}', '{$allday}', '{$startdate}', '{$enddate}', '{$author}', '{$priority}', '{$archive}')";
 					if(isset($_POST['submit_save'])) {
 						$action = "new";
 					} else {
@@ -118,15 +118,16 @@ function events_insert_input() {
 function events_insert_category() {
 	global $wpdb;
 
-	$id 	= $_POST['events_id'];
-	$name 	= $_POST['events_cat'];
+	$id = $name = '';
+	if(isset($_POST['events_id'])) $id = esc_attr($_POST['events_id']);
+	if(isset($_POST['events_cat'])) $name = esc_attr($_POST['events_cat']);
 
 	if (strlen($name) != 0) {
 		if($id > 0) {
-			$postquery = "UPDATE `".$wpdb->prefix."events_categories` SET `name` = '$name' WHERE `id` = '$id'";
+			$postquery = "UPDATE `{$wpdb->prefix}events_categories` SET `name` = '{$name}' WHERE `id` = {$id}";
 			$action = "category_edit";
 		} else {
-			$postquery = "INSERT INTO `".$wpdb->prefix."events_categories` (`name`) VALUES ('$name')";
+			$postquery = "INSERT INTO `{$wpdb->prefix}events_categories` (`name`) VALUES ('{$name}')";
 			$action = "category_new";
 		}
 		if($wpdb->query($postquery) !== FALSE) {
@@ -152,9 +153,10 @@ function events_request_delete() {
 	global $wpdb, $userdata, $events_config;
 
 	if(current_user_can($events_config['managelevel'])) {
-		$event_ids = $_POST['eventcheck'];
-		$category_ids = $_POST['categorycheck'];
-		if($event_ids != '') {
+		$event_ids = $category_ids = '';
+		if(isset($_POST['eventcheck'])) $event_ids = $_POST['eventcheck'];
+		if(isset($_POST['categorycheck'])) $category_ids = $_POST['categorycheck'];
+		if(is_array($event_ids) AND count($event_ids) > 0) {
 			foreach($event_ids as $event_id) {
 				events_delete($event_id, 'event');
 			}
@@ -167,7 +169,7 @@ function events_request_delete() {
 	}
 
 	if(current_user_can($events_config['catlevel'])) {
-		if($category_ids != '') {
+		if(is_array($category_ids) AND count($category_ids) > 0) {
 			foreach($category_ids as $category_id) {
 				events_delete($category_id, 'category');
 			}
@@ -192,12 +194,12 @@ function events_delete($id, $what) {
 
 	if($id > 0) {
 		if($what == 'event') {
-				$SQL = "DELETE FROM `".$wpdb->prefix."events` WHERE `id` = $id";
+				$SQL = "DELETE FROM `{$wpdb->prefix}events` WHERE `id` = $id";
 				if($wpdb->query($SQL) == FALSE) {
 					die(mysql_error());
 				}
 		} else if ($what == 'category') {
-			$SQL = "DELETE FROM `".$wpdb->prefix."events_categories` WHERE `id` = $id";
+			$SQL = "DELETE FROM `{$wpdb->prefix}events_categories` WHERE `id` = $id";
 			if($wpdb->query($SQL) == FALSE) {
 				die(mysql_error());
 			}
@@ -299,25 +301,25 @@ function events_check_config() {
 function events_general_submit() {
 
 	// Prepare general settings
-	$option['length'] 					= trim($_POST['events_length'], "\t\n ");
-	$option['sidelength'] 				= trim($_POST['events_sidelength'], "\t\n ");
-	$option['sideshow'] 				= $_POST['events_sideshow'];
-	$option['amount'] 					= trim($_POST['events_amount'], "\t\n ");
-	$option['addlevel'] 				= $_POST['events_addlevel'];
-	$option['editlevel'] 				= $_POST['events_editlevel'];
-	$option['catlevel'] 				= $_POST['events_catlevel'];
-	$option['managelevel'] 				= $_POST['events_managelevel'];
-	$option['hideend']	 				= $_POST['events_hideend'];
-	$option['hideendsidebar']			= $_POST['events_hideendsidebar'];
-	$option['custom_date_page'] 		= $_POST['events_custom_date_page'];
-	$option['custom_date_sidebar']		= $_POST['events_custom_date_sidebar'];
-	$option['dateformat'] 				= htmlspecialchars(trim($_POST['events_dateformat'], "\t\n "), ENT_QUOTES);
-	$option['dateformat_sidebar']		= htmlspecialchars(trim($_POST['events_dateformat_sidebar'], "\t\n "), ENT_QUOTES);
-	$option['timeformat'] 				= $_POST['events_timeformat'];
-	$option['timeformat_sidebar']		= $_POST['events_timeformat_sidebar'];
-	$option['order']	 				= $_POST['events_order'];
-	$option['order_archive'] 			= $_POST['events_order_archive'];
-	$option['linktarget'] 				= $_POST['events_linktarget'];
+	$option['length'] 					= trim(esc_attr($_POST['events_length']), "\t\n ");
+	$option['sidelength'] 				= trim(esc_attr($_POST['events_sidelength']), "\t\n ");
+	$option['sideshow'] 				= esc_attr($_POST['events_sideshow']);
+	$option['amount'] 					= trim(esc_attr($_POST['events_amount']), "\t\n ");
+	$option['addlevel'] 				= esc_attr($_POST['events_addlevel']);
+	$option['editlevel'] 				= esc_attr($_POST['events_editlevel']);
+	$option['catlevel'] 				= esc_attr($_POST['events_catlevel']);
+	$option['managelevel'] 				= esc_attr($_POST['events_managelevel']);
+	$option['hideend']	 				= esc_attr($_POST['events_hideend']);
+	$option['hideendsidebar']			= esc_attr($_POST['events_hideendsidebar']);
+	$option['custom_date_page'] 		= esc_attr($_POST['events_custom_date_page']);
+	$option['custom_date_sidebar']		= esc_attr($_POST['events_custom_date_sidebar']);
+	$option['dateformat'] 				= htmlspecialchars(trim(esc_attr($_POST['events_dateformat']), "\t\n "), ENT_QUOTES);
+	$option['dateformat_sidebar']		= htmlspecialchars(trim(esc_attr($_POST['events_dateformat_sidebar']), "\t\n "), ENT_QUOTES);
+	$option['timeformat'] 				= esc_attr($_POST['events_timeformat']);
+	$option['timeformat_sidebar']		= esc_attr($_POST['events_timeformat_sidebar']);
+	$option['order']	 				= esc_attr($_POST['events_order']);
+	$option['order_archive'] 			= esc_attr($_POST['events_order_archive']);
+	$option['linktarget'] 				= esc_attr($_POST['events_linktarget']);
 	update_option('events_config', $option);
 }
 
@@ -398,11 +400,11 @@ function events_language_submit() {
 function events_return($action, $arg = null) {
 	switch($action) {
 		case "new" :
-			wp_redirect('admin.php?page=wp-events2&action=created&duplicate='.$arg[0]);
+			wp_redirect('admin.php?page=wp-events-edit&action=created&duplicate='.$arg[0]);
 		break;
 
 		case "duplicated" :
-			wp_redirect('admin.php?page=wp-events2&action=duplicated&duplicate='.$arg[0]);
+			wp_redirect('admin.php?page=wp-events-edit&action=duplicated&duplicate='.$arg[0]);
 		break;
 
 		case "update" :
@@ -410,11 +412,11 @@ function events_return($action, $arg = null) {
 		break;
 
 		case "field_error" :
-			wp_redirect('admin.php?page=wp-events2&action=field_error');
+			wp_redirect('admin.php?page=wp-events-edit&action=field_error');
 		break;
 
 		case "error" :
-			wp_redirect('admin.php?page=wp-events2&action=error');
+			wp_redirect('admin.php?page=wp-events-edit&action=error');
 		break;
 
 		case "no_access" :
@@ -426,7 +428,7 @@ function events_return($action, $arg = null) {
 		break;
 
 		case "delete-category" :
-			wp_redirect('admin.php?page=wp-events3&action=delete-category');
+			wp_redirect('admin.php?page=wp-events-category&action=delete-category');
 		break;
 
 		case "uninstall" :
@@ -434,15 +436,15 @@ function events_return($action, $arg = null) {
 		break;
 
 		case "category_new" :
-			wp_redirect('admin.php?page=wp-events3&action=category_new');
+			wp_redirect('admin.php?page=wp-events-category&action=category_new');
 		break;
 
 		case "category_edit" :
-			wp_redirect('admin.php?page=wp-events3&action=category_edit');
+			wp_redirect('admin.php?page=wp-events-category&action=category_edit');
 		break;
 
 		case "category_field_error" :
-			wp_redirect('admin.php?page=wp-events3&action=category_field_error');
+			wp_redirect('admin.php?page=wp-events-category&action=category_field_error');
 		break;
 	}
 }

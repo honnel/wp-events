@@ -1,11 +1,11 @@
 <?php 
 /*
 Plugin Name: Events
-Plugin URI: http://meandmymac.net/plugins/events/
-Description: Enables you to show a list of events with a static countdown to date. Sidebar widget and page template options. And more...
+Plugin URI: https://www.arnandegans.nl/?pk_campaign=wordpressorg
 Author: Arnan de Gans
-Version: 2.2.4.1
-Author URI: http://meandmymac.net/
+Author URI: http://meandmymac.net?pk_campaign=wordpressorg
+Description: Show a list of events with a static countdown to date. Sidebar widget and page template options. And more...
+Version: 2.3.4
 */
 
 #---------------------------------------------------
@@ -23,30 +23,30 @@ register_deactivation_hook(__FILE__, 'events_deactivate');
 events_check_config();
 events_clear_old();
 
-setlocale(LC_ALL, get_locale().'.'.DB_CHARSET);
-
 add_action('init', 'events_textdomain'); 
 add_action('widgets_init', 'events_widget_sidebar_init');
-add_action('wp_dashboard_setup', 'events_widget_dashboard_init');
-
-add_action('admin_init', 'events_editor_admin_init');
-add_action('admin_menu', 'events_dashboard', 1);
-
 add_shortcode('events_show', 'events_show');
 add_shortcode('events_ics_download', 'events_ics_download');
 
-if (isset($_POST['events_submit'])) 			add_action('init', 'events_insert_input');
-if (isset($_POST['events_category_submit'])) 	add_action('init', 'events_insert_category');
-if (isset($_POST['delete_events']) OR isset($_POST['delete_categories'])) add_action('init', 'events_request_delete');
-if (isset($_POST['events_submit_general'])) 	add_action('init', 'events_general_submit');
-if (isset($_POST['events_submit_templates'])) 	add_action('init', 'events_templates_submit');
-if (isset($_POST['events_submit_language'])) 	add_action('init', 'events_language_submit');
-if (isset($_POST['events_uninstall'])) 			add_action('init', 'events_plugin_uninstall');
-if (isset($_POST['events_upgrade'])) 			add_action('init', 'events_upgrade');
+if(is_admin()) {
+	add_action('wp_dashboard_setup', 'events_widget_dashboard_init');
+	add_action('admin_init', 'events_editor_admin_init');
+	add_action('admin_head', 'events_editor_admin_head');
+	add_action('admin_menu', 'events_dashboard', 1);
 
-$events_config 		= get_option('events_config');
-$events_template 	= get_option('events_template');
-$events_language 	= get_option('events_language');
+	if(isset($_POST['events_submit'])) add_action('init', 'events_insert_input');
+	if(isset($_POST['events_category_submit'])) add_action('init', 'events_insert_category');
+	if(isset($_POST['delete_events']) OR isset($_POST['delete_categories'])) add_action('init', 'events_request_delete');
+	if(isset($_POST['events_submit_general'])) add_action('init', 'events_general_submit');
+	if(isset($_POST['events_submit_templates'])) add_action('init', 'events_templates_submit');
+	if(isset($_POST['events_submit_language'])) add_action('init', 'events_language_submit');
+	if(isset($_POST['events_uninstall'])) add_action('init', 'events_plugin_uninstall');
+	if(isset($_POST['events_upgrade'])) add_action('init', 'events_upgrade');
+}
+
+$events_config = get_option('events_config');
+$events_template = get_option('events_template');
+$events_language = get_option('events_language');
 
 /*-------------------------------------------------------------
  Name:      events_dashboard
@@ -60,10 +60,10 @@ function events_dashboard() {
 
 	add_object_page(__('Events', 'wpevents'), __('Events', 'wpevents'), $events_config['addlevel'], 'wp-events', 'events_manage');
 		add_submenu_page('wp-events', __('Events', 'wpevents').' > '.__('Manage', 'wpevents'), __('Manage Events', 'wpevents'), $events_config['addlevel'], 'wp-events', 'events_manage');
-		add_submenu_page('wp-events', __('Events', 'wpevents').' > '.__('Add/Edit', 'wpevents'), __('Add|Edit Event', 'wpevents'), $events_config['addlevel'], 'wp-events2', 'events_schedule');
-		add_submenu_page('wp-events', __('Events', 'wpevents').' > '.__('Categories', 'wpevents'), __('Manage Categories', 'wpevents'), $events_config['editlevel'], 'wp-events3', 'events_categories');
+		add_submenu_page('wp-events', __('Events', 'wpevents').' > '.__('Add/Edit', 'wpevents'), __('Add|Edit Event', 'wpevents'), $events_config['addlevel'], 'wp-events-edit', 'events_schedule');
+		add_submenu_page('wp-events', __('Events', 'wpevents').' > '.__('Categories', 'wpevents'), __('Manage Categories', 'wpevents'), $events_config['editlevel'], 'wp-events-category', 'events_categories');
 
-	add_options_page(__('Events', 'wpevents'), __('Events', 'wpevents'), 'manage_options', 'wp-events4', 'events_options');
+	add_options_page(__('Events', 'wpevents'), __('Events', 'wpevents'), 'manage_options', 'wp-events-settings', 'events_options');
 }
 
 /*-------------------------------------------------------------
@@ -76,9 +76,10 @@ function events_dashboard() {
 function events_manage() {
 	global $wpdb, $events_config;
 
-	$action = $_GET['action'];
+	$action = $order = '';
+	if(isset($_GET['action'])) $action = esc_attr($_GET['action']);
 	if(isset($_POST['order'])) {
-		$order = $_POST['order'];
+		$order = esc_attr($_POST['order']);
 	} else {
 		$order = 'thetime DESC';
 	} ?>
@@ -124,15 +125,16 @@ function events_manage() {
   			<tbody>
 		<?php 
 		if(events_mysql_table_exists($wpdb->prefix.'events')) {
-			$events = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."events` ORDER BY $order");
+			$events = $wpdb->get_results("SELECT * FROM `{$wpdb->prefix}events` ORDER BY $order");
 			if ($events) {
+				$class = '';
 				foreach($events as $event) {
-					$cat = $wpdb->get_row("SELECT name FROM " . $wpdb->prefix . "events_categories WHERE id = '".$event->category."'");
+					$cat = $wpdb->get_row("SELECT `name` FROM `{$wpdb->prefix}events_categories` WHERE `id` = '{$event->category}'");
 					$class = ('alternate' != $class) ? 'alternate' : ''; ?>
 				    <tr id='event-<?php echo $event->id; ?>' class=' <?php echo $class; ?>'>
 						<th scope="row" class="check-column"><input type="checkbox" name="eventcheck[]" value="<?php echo $event->id; ?>" /></th>
 						<td><?php echo gmdate('d-m-Y H:i', $event->thetime);?></td>
-						<td><strong><a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/admin.php?page=wp-events2&amp;edit_event='.$event->id;?>" title="<?php _e('Edit', 'wpevents'); ?>"><?php echo stripslashes(html_entity_decode($event->title));?></a></strong></td>
+						<td><strong><a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/admin.php?page=wp-events-edit&amp;edit_event='.$event->id;?>" title="<?php _e('Edit', 'wpevents'); ?>"><?php echo stripslashes(html_entity_decode($event->title));?></a></strong></td>
 						<td><?php echo $cat->name; ?></td>
 						<td><?php echo events_countdown($event->thetime, $event->theend, $event->post_message, $event->allday); ?></td>
 					</tr>
@@ -142,7 +144,7 @@ function events_manage() {
 			<?php 
 			}
 		} else { ?>
-			<tr id='no-id'><td scope="row" colspan="5"><span style="font-weight: bold; color: #f00;"><?php _e('There was an error locating the main database table for Events.', 'wpevents'); _e('Please deactivate and re-activate Events from the plugin page!!', 'wpevents'); ?><br /><?php echo sprintf(__('If this does not solve the issue please seek support at <a href="%s">%s</a>.', 'wpevents'), 'http://meandmymac.net/support/', 'http://meandmymac.net/support/'); ?></span></td></tr>
+			<tr id='no-id'><td scope="row" colspan="5"><span style="font-weight: bold; color: #f00;"><?php _e('There was an error locating the main database table for Events.', 'wpevents'); _e('Please deactivate and re-activate Events from the plugin page!!', 'wpevents'); ?><br /><?php echo sprintf(__('If this does not solve the issue please seek support at <a href="%s">%s</a>.', 'wpevents'), 'http://meandmymac.net/contact-and-support/?pk_campaign=wpevents-eventslist&pk_kwd=databaseerror', 'http://meandmymac.net/support/'); ?></span></td></tr>
 
 		<?php }	?>
 			</tbody>
@@ -166,11 +168,12 @@ function events_manage() {
 function events_categories() {
 	global $wpdb, $events_config;
 
-	$action = $_GET['action'];
-	if($_GET['edit_cat']) $cat_edit_id = $_GET['edit_cat'];
+	$action = $cat_edit_id = $catorder = '';
+	if(isset($_GET['action'])) $action = esc_attr($_GET['action']);
+	if(isset($_GET['edit_cat'])) $cat_edit_id = esc_attr($_GET['edit_cat']);
 
 	if(isset($_POST['catorder'])) {
-		$catorder = $_POST['catorder'];
+		$catorder = esc_attr($_POST['catorder']);
 	} else {
 		$catorder = 'id ASC';
 	} ?>
@@ -183,7 +186,7 @@ function events_categories() {
 		<?php } else if ($action == 'no_access') { ?>
 			<div id="message" class="updated fade"><p><?php _e('Action prohibited', 'wpevents'); ?></p></div>
 		<?php } else if ($action == 'category_new') { ?>
-			<div id="message" class="updated fade"><p><?php _e('Category <strong>created</strong>', 'wpevents'); ?>. <a href="admin.php?page=wp-events2"><?php _e('Add events now', 'wpevents'); ?></a></p></div>
+			<div id="message" class="updated fade"><p><?php _e('Category <strong>created</strong>', 'wpevents'); ?>. <a href="admin.php?page=wp-events-edit"><?php _e('Add events now', 'wpevents'); ?></a></p></div>
 		<?php } else if ($action == 'category_edit') { ?>
 			<div id="message" class="updated fade"><p><?php _e('Category <strong>updated</strong>', 'wpevents'); ?></p></div>
 		<?php } else if ($action == 'category_field_error') { ?>
@@ -191,7 +194,7 @@ function events_categories() {
 		<?php } ?>
 
 		<?php if(!$cat_edit_id) { ?>
-			<form name="groups" id="post" method="post" action="admin.php?page=wp-events3">
+			<form name="groups" id="post" method="post" action="admin.php?page=wp-events-category">
 			<div class="tablenav">
 				<div class="alignleft actions">
 					<input onclick="return confirm('<?php _e('You are about to delete one or more categories! Make sure there are no events in those categories or they will not show on the website', 'wpevents'); ?>\n<?php _e('[OK] to continue, [Cancel] to stop.', 'wpevents'); ?>')" type="submit" value="<?php _e('Delete category', 'wpevents'); ?>" name="delete_categories" class="button-secondary delete" />
@@ -216,23 +219,24 @@ function events_categories() {
 	  			</thead>
 	  			<tbody>
 			<?php 
-			if(events_mysql_table_exists($wpdb->prefix.'events_categories')) {
-				$categories = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "events_categories ORDER BY $catorder");
+			if(events_mysql_table_exists("{$wpdb->prefix}events_categories")) {
+				$categories = $wpdb->get_results("SELECT * FROM `{$wpdb->prefix}events_categories` ORDER BY $catorder");
 				if ($categories) {
+					$class = '';
 					foreach($categories as $category) {
-						$count = $wpdb->get_var("SELECT COUNT(category) FROM " . $wpdb->prefix . "events WHERE category = '". $category->id."' GROUP BY category");
+						$count = $wpdb->get_var("SELECT COUNT(category) FROM `{$wpdb->prefix}events` WHERE `category` = '{$category->id}' GROUP BY `category`");
 						$class = ('alternate' != $class) ? 'alternate' : ''; ?>
 					    <tr id='group-<?php echo $category->id; ?>' class=' <?php echo $class; ?>'>
 							<th scope="row" class="check-column"><input type="checkbox" name="categorycheck[]" value="<?php echo $category->id; ?>" /></th>
 							<td><center><?php echo $category->id;?></center></td>
-							<td><strong><a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/admin.php?page=wp-events3&amp;edit_cat='.$category->id;?>" title="<?php _e('Edit', 'wpevents'); ?>"><?php echo $category->name;?></a></strong></td>
+							<td><strong><a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/admin.php?page=wp-events-category&amp;edit_cat='.$category->id;?>" title="<?php _e('Edit', 'wpevents'); ?>"><?php echo $category->name;?></a></strong></td>
 							<td><center><?php echo $count;?></center></td>
 						</tr>
 		 			<?php } ?>
 				<?php 
 				}
 			} else { ?>
-				<tr id='no-id'><td scope="row" colspan="4"><span style="font-weight: bold; color: #f00;"><?php _e('There was an error locating the database table for the Events categories.', 'wpevents'); _e('Please deactivate and re-activate Events from the plugin page!!', 'wpevents'); ?><br /><?php echo sprintf(__('If this does not solve the issue please seek support at <a href="%s">%s</a>.', 'wpevents'), 'http://meandmymac.net/support/', 'http://meandmymac.net/support/'); ?></a></span></td></tr>
+				<tr id='no-id'><td scope="row" colspan="4"><span style="font-weight: bold; color: #f00;"><?php _e('There was an error locating the database table for the Events categories.', 'wpevents'); _e('Please deactivate and re-activate Events from the plugin page!!', 'wpevents'); ?><br /><?php echo sprintf(__('If this does not solve the issue please seek support at <a href="%s">%s</a>.', 'wpevents'), 'http://meandmymac.net/contact-and-support/?pk_campaign=wpevents-categories&pk_kwd=databaseerror', 'http://meandmymac.net/support/'); ?></a></span></td></tr>
 			<?php }	?>
 				<tr id='category-new'>
 					<th scope="row" class="check-column">&nbsp;</th>
@@ -248,14 +252,15 @@ function events_categories() {
 		<?php } else { ?>
 
 			<?php 
-			$edit_cat = $wpdb->get_row("SELECT * FROM `".$wpdb->prefix."events_categories` WHERE `id` = '$cat_edit_id'");
+			$edit_cat = $wpdb->get_row("SELECT * FROM `{$wpdb->prefix}events_categories` WHERE `id` = '{$cat_edit_id}'");
 
+			$message = '';
 			if ($message == 'field_error') { ?>
 				<div id="message" class="updated fade"><p><?php _e('Please fill in a name for your category!', 'wpevents'); ?></p></div>
 			<?php }
 
 			if($cat_edit_id > 0) { ?>
-			  	<form method="post" action="admin.php?page=wp-events4">
+			  	<form method="post" action="admin.php?page=wp-events-category">
 			    	<input type="hidden" name="events_id" value="<?php echo $cat_edit_id;?>" />
 
 			    	<table class="widefat" style="margin-top: .5em">
@@ -281,7 +286,7 @@ function events_categories() {
 
 			    	<p class="submit">
 						<input tabindex="2" type="submit" name="events_category_submit" class="button-primary" value="<?php _e('Save Category', 'wpevents'); ?>" />
-						<a href="admin.php?page=wp-events4" class="button"><?php _e('Cancel', 'wpevents'); ?></a>
+						<a href="admin.php?page=wp-events-category" class="button"><?php _e('Cancel', 'wpevents'); ?></a>
 			    	</p>
 
 			  	</form>
@@ -295,7 +300,7 @@ function events_categories() {
 
 					<tbody>
 			      	<tr>
-				        <td><?php _e('No valid group ID specified!', 'wpevents'); ?> <a href="admin.php?page=wp-events3"><?php _e('Continue', 'wpevents'); ?></a>.</td>
+				        <td><?php _e('No valid group ID specified!', 'wpevents'); ?> <a href="admin.php?page=wp-events-category"><?php _e('Continue', 'wpevents'); ?></a>.</td>
 			      	</tr>
 			      	</tbody>
 				</table>
@@ -318,25 +323,27 @@ function events_schedule() {
 	$timezone = get_option('gmt_offset')*3600;
 	$thetime 	= current_time('timestamp');
 
-	$action = $_GET['action'];
-	if($_GET['edit_event']) {
-		$event_edit_id = $_GET['edit_event'];
+	$action = $event_edit_id = '';
+	if(isset($_GET['action'])) $action = esc_attr($_GET['action']);
+	if(isset($_GET['edit_event'])) {
+		$event_edit_id = esc_attr($_GET['edit_event']);
 	}
-	if($_GET['duplicate']) {
-		$event_edit_id = $_GET['duplicate'];
+	if(isset($_GET['duplicate'])) {
+		$event_edit_id = esc_attr($_GET['duplicate']);
 	}
 	?>
 	<div class="wrap">
 		<?php if(!$event_edit_id) { ?>
 		<h2><?php _e('Add event', 'wpevents'); ?></h2>
 		<?php 
-			list($sday, $smonth, $syear) = split(" ", gmdate("d m Y", $thetime));
+			list($sday, $smonth, $syear) = explode(" ", gmdate("d m Y", $thetime));
+			$shour = $sminute = $eday = $emonth = $eyear = $ehour = $eminute = '';
 		} else { ?>
 		<h2><?php _e('Edit event', 'wpevents'); ?></h2>
 		<?php 
-			$edit_event = $wpdb->get_row("SELECT * FROM `".$wpdb->prefix."events` WHERE `id` = $event_edit_id");
-			list($sday, $smonth, $syear, $shour, $sminute) = split(" ", gmdate("d m Y H i", $edit_event->thetime));
-			list($eday, $emonth, $eyear, $ehour, $eminute) = split(" ", gmdate("d m Y H i", $edit_event->theend));
+			$edit_event = $wpdb->get_row("SELECT * FROM `{$wpdb->prefix}events` WHERE `id` = {$event_edit_id}");
+			list($sday, $smonth, $syear, $shour, $sminute) = explode(" ", gmdate("d m Y H i", $edit_event->thetime));
+			list($eday, $emonth, $eyear, $ehour, $eminute) = explode(" ", gmdate("d m Y H i", $edit_event->theend));
 		}
 
 		if ($action == 'created') { ?>
@@ -350,10 +357,9 @@ function events_schedule() {
 		<?php }
 
 		if(!$event_edit_id OR ($edit_event->author == $userdata->user_login OR current_user_can($events_config['editlevel']))) {
-			$SQL2 = "SELECT * FROM ".$wpdb->prefix."events_categories ORDER BY id";
-			$categories = $wpdb->get_results($SQL2);
+			$categories = $wpdb->get_results("SELECT * FROM `{$wpdb->prefix}events_categories` ORDER BY `id`");
 			if($categories) { ?>
-			  	<form method="post" action="admin.php?page=wp-events2">
+			  	<form method="post" action="admin.php?page=wp-events-edit">
 			  	   	<input type="hidden" name="events_submit" value="true" />
 			    	<input type="hidden" name="events_username" value="<?php echo $userdata->user_login;?>" />
 			    	<input type="hidden" name="events_event_id" value="<?php echo $event_edit_id;?>" />
@@ -372,8 +378,8 @@ function events_schedule() {
 				      	<tbody>
 				      	<tr>
 					        <th scope="row"><?php _e('Title', 'wpevents'); ?>:</th>
-					        <td><input name="events_title" class="search-input" type="text" size="55" maxlength="<?php echo $events_config['length'];?>" value="<?php echo $edit_event->title;?>" tabindex="1" autocomplete="off" /><br /><em><?php echo sprintf(__('Maximum %s characters.', 'wpevents'), $events_config['length']); ?></em></td>
-					        <td width="35%"><input type="checkbox" name="events_title_link" <?php if($edit_event->title_link == 'Y') { ?>checked="checked" <?php } ?> tabindex="2" /> <?php _e('Make title a link.', 'wpevents');?> <?php _e('Use the field below.', 'wpevents'); ?><br /><input type="checkbox" name="events_allday" <?php if($edit_event->allday == 'Y') { ?>checked="checked" <?php } ?> tabindex="3" /> <?php _e('All-day event.', 'wpevents'); ?></td>
+					        <td><input name="events_title" class="search-input" type="text" size="55" maxlength="<?php echo $events_config['length'];?>" value="<?php echo (isset($edit_event)) ? $edit_event->title : '';?>" tabindex="1" autocomplete="off" /><br /><em><?php echo sprintf(__('Maximum %s characters.', 'wpevents'), $events_config['length']); ?></em></td>
+					        <td width="35%"><input type="checkbox" name="events_title_link" <?php if(isset($edit_event) && $edit_event->title_link == 'Y') { ?>checked="checked" <?php } ?> tabindex="2" /> <?php _e('Make title a link.', 'wpevents');?> <?php _e('Use the field below.', 'wpevents'); ?><br /><input type="checkbox" name="events_allday" <?php if(isset($edit_event) && $edit_event->allday == 'Y') { ?>checked="checked" <?php } ?> tabindex="3" /> <?php _e('All-day event.', 'wpevents'); ?></td>
 						</tr>
 						</tbody>
 	
@@ -381,7 +387,8 @@ function events_schedule() {
 	
 					<br class="clear" />
 					<div id="poststuff">
-						<?php the_editor($edit_event->pre_message, 'content', 'events_allday', false, 4); ?>
+					    <?php 
+						    wp_editor((isset($edit_event)) ? $edit_event->pre_message : '', 'content', array('media_buttons' => false, 'textarea_rows' => 5, 'tabindex' => 4, 'quicktags' => true, 'drag_drop_upload' => false, 'textarea_name' => 'content')); ?>
 					</div>
 	
 					<br class="clear" />
@@ -651,14 +658,18 @@ function events_schedule() {
 								<option value="20">20</option>
 							</select></td>
 				      	</tr>
+				      	<?php } else { ?>
+			    	<input type="hidden" name="events_repeat_every" value="" />
+			    	<input type="hidden" name="events_repeat" value="0" />
+
 				      	<?php } ?>
 				      	<tr>
 					        <th scope="row"><?php _e('Location', 'wpevents'); ?> (<?php _e('optional', 'wpevents'); ?>):</th>
-					        <td width="30%"><input name="events_location" class="search-input" type="text" size="25" maxlength="255" value="<?php echo $edit_event->location;?>" tabindex="16" /><br /><em><?php _e('Maximum 255 characters.', 'wpevents'); ?></em></td>
+					        <td width="30%"><input name="events_location" class="search-input" type="text" size="25" maxlength="255" value="<?php echo (isset($edit_event)) ? $edit_event->location : '';?>" tabindex="16" /><br /><em><?php _e('Maximum 255 characters.', 'wpevents'); ?></em></td>
 					        <th scope="row"><?php _e('Category', 'wpevents'); ?>:</th>
 					        <td width="30%" valign="top"><select name='events_category' id='cat' class='postform' tabindex="17">
 							<?php foreach($categories as $category) { ?>
-							    <option value="<?php echo $category->id; ?>" <?php if($category->id == $edit_event->category) { echo 'selected'; } ?>><?php echo $category->name; ?></option>
+							    <option value="<?php echo $category->id; ?>" <?php if(isset($edit_event) && $category->id == $edit_event->category) { echo 'selected'; } ?>><?php echo $category->name; ?></option>
 					    	<?php } ?>
 					    	</select></td>
 				      	</tr>
@@ -686,36 +697,34 @@ function events_schedule() {
 						</tr>
 				      	<tr>
 					        <th scope="row"><?php _e('Message when event ends', 'wpevents'); ?> (<?php _e('optional', 'wpevents'); ?>):</th>
-					        <td colspan="3"><textarea name="events_post_event" class="search-input" cols="65" rows="2" tabindex="20"><?php echo $edit_event->post_message;?></textarea><br />
+					        <td colspan="3"><textarea name="events_post_event" class="search-input" cols="65" rows="2" tabindex="20"><?php echo (isset($edit_event)) ? $edit_event->post_message : '';?></textarea><br />
 					        	<em><?php echo sprintf(__('Maximum %s characters.', 'wpevents'), $events_config['length']); ?> <?php _e('HTML allowed', 'wpevents'); ?>.</em></td>
 				      	</tr>
 				      	<tr>
 					        <th scope="row"><?php _e('Link to page', 'wpevents'); ?> (<?php _e('optional', 'wpevents'); ?>):</th>
-					        <td colspan="3"><input name="events_link" class="search-input" type="text" size="65 " maxlength="10000" value="<?php echo $edit_event->link;?>" tabindex="21" /><br />
+					        <td colspan="3"><input name="events_link" class="search-input" type="text" size="65 " maxlength="10000" value="<?php echo (isset($edit_event)) ? $edit_event->link : '';?>" tabindex="21" /><br />
 					        	<em><?php _e('Include full url and http://, this can be any page.', 'wpevents'); _e('Required if checkbox above is checked!', 'wpevents'); ?></em></td>
 				      	</tr>
 				      	</tbody>
 	
 					</table>
 	
-					<br class="clear" />
-					<?php events_credits(); ?>
-	
 			    	<p class="submit">
 						<?php if($event_edit_id) { ?>
-						<input type="submit" name="submit_save" class="button-primary" value="<?php _e('Edit event', 'wpevents'); ?>" tabindex="22" />
-						<input type="submit" name="submit_new" class="button-primary" value="<?php _e('Duplicate event', 'wpevents'); ?>" tabindex="23" />
+						<input type="submit" name="submit_save" class="button-primary" value="<?php _e('Save event', 'wpevents'); ?>" tabindex="22" />
+						<input type="submit" name="submit_new" class="button-primary" value="<?php _e('Save as Duplicate', 'wpevents'); ?>" tabindex="23" />
 						<?php } else { ?>
 						<input type="submit" name="submit_save" class="button-primary" value="<?php _e('Save event', 'wpevents'); ?>" tabindex="22" />
 						<?php } ?>
-						<a href="admin.php?page=wp-events2" class="button"><?php _e('Cancel', 'wpevents'); ?></a>
+						<a href="admin.php?page=wp-events-edit" class="button"><?php _e('Cancel', 'wpevents'); ?></a>
 			    	</p>
-	
+
+					<?php events_credits(); ?>	
 			  	</form>
 			<?php } else { ?>
 			    <table class="form-table">
 					<tr valign="top">
-						<td bgcolor="#DDD"><strong><?php _e('You should create at least one category before adding events!', 'wpevents'); ?> <a href="admin.php?page=wp-events4"><?php _e('Add a category now', 'wpevents'); ?></a>.</strong><br /><?php _e('Tip: If you do not want to use categories create one "uncategorized" and put all events in there. You don\'t have to show the categories on your blog.', 'wpevents'); ?></td>
+						<td bgcolor="#DDD"><strong><?php _e('You should create at least one category before adding events!', 'wpevents'); ?> <a href="admin.php?page=wp-events-category"><?php _e('Add a category now', 'wpevents'); ?></a>.</strong><br /><?php _e('Tip: If you do not want to use categories create one "uncategorized" and put all events in there. You don\'t have to show the categories on your blog.', 'wpevents'); ?></td>
 					</tr>
 				</table>
 			<?php } ?>
@@ -744,9 +753,10 @@ function events_options() {
 	$events_template = get_option('events_template');
 	$events_language = get_option('events_language');
 
+	$view = '';
 	$gmt_offset = (get_option('gmt_offset')*3600);
-	$timezone 	= gmdate("U") + $gmt_offset;
-	$view 		= $_GET['view'];
+	$timezone = gmdate("U") + $gmt_offset;
+	if(isset($_GET['view'])) $view = esc_attr($_GET['view']);
 ?>
 	<div class="wrap">
 	  	<h2><?php _e('Events options', 'wpevents'); ?></h2>
@@ -754,10 +764,10 @@ function events_options() {
 
 			<div class="tablenav">
 				<div class="alignleft actions">
-					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events4&view=main';?>"><?php _e('General', 'wpevents'); ?></a> | 
-					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events4&view=templates';?>"><?php _e('Templates', 'wpevents'); ?></a> | 
-					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events4&view=language';?>"><?php _e('Language', 'wpevents'); ?></a> | 
-					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events4&view=uninstall';?>"><?php _e('Uninstall', 'wpevents'); ?></a>
+					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events-settings&view=main';?>"><?php _e('General', 'wpevents'); ?></a> | 
+					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events-settings&view=templates';?>"><?php _e('Templates', 'wpevents'); ?></a> | 
+					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events-settings&view=language';?>"><?php _e('Language', 'wpevents'); ?></a> | 
+					<a class="row-title" href="<?php echo get_option('siteurl').'/wp-admin/options-general.php?page=wp-events-settings&view=uninstall';?>"><?php _e('Uninstall', 'wpevents'); ?></a>
 				</div>
 			</div>
 
@@ -794,21 +804,19 @@ function events_options() {
 			        <?php if($events_config['custom_date_sidebar'] == 'no') { ?>
 			        <td><select name="events_dateformat_sidebar">
 				        <option disabled="disabled">-- <?php _e('Day', 'wpevents'); ?>/<?php _e('Month', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%d %m %Y" <?php if($events_config['dateformat_sidebar'] == "%d %m %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %m %Y", $timezone); ?></option>
-				        <option value="%d %b %Y" <?php if($events_config['dateformat_sidebar'] == "%d %b %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %b %Y", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
-				        <option value="%d %B %Y" <?php if($events_config['dateformat_sidebar'] == "%d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %B %Y", $timezone); ?></option>
+				        <option value="d m Y" <?php if($events_config['dateformat_sidebar'] == "d m Y") { echo 'selected'; } ?>><?php echo date_i18n("d m Y", $timezone); ?></option>
+				        <option value="d M Y" <?php if($events_config['dateformat_sidebar'] == "d M Y") { echo 'selected'; } ?>><?php echo date_i18n("d M Y", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
+				        <option value="d F Y" <?php if($events_config['dateformat_sidebar'] == "d F Y") { echo 'selected'; } ?>><?php echo date_i18n("d F Y", $timezone); ?></option>
 				        <option disabled="disabled">-- <?php _e('Month', 'wpevents'); ?>/<?php _e('Day', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%m %d %Y" <?php if($events_config['dateformat_sidebar'] == "%m %d %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%m %d %Y", $timezone); ?></option>
-				        <option value="%b %d %Y" <?php if($events_config['dateformat_sidebar'] == "%b %d %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%b %d %Y", $timezone); ?></option>
-				        <option value="%B %d %Y" <?php if($events_config['dateformat_sidebar'] == "%B %d %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%B %d %Y", $timezone); ?></option>
+				        <option value="m d Y" <?php if($events_config['dateformat_sidebar'] == "m d Y") { echo 'selected'; } ?>><?php echo date_i18n("m d Y", $timezone); ?></option>
+				        <option value="M d Y" <?php if($events_config['dateformat_sidebar'] == "M d Y") { echo 'selected'; } ?>><?php echo date_i18n("M d Y", $timezone); ?></option>
+				        <option value="F d Y" <?php if($events_config['dateformat_sidebar'] == "F d Y") { echo 'selected'; } ?>><?php echo date_i18n("F d Y", $timezone); ?></option>
 				        <option disabled="disabled">-- <?php _e('Weekday', 'wpevents'); ?> <?php _e('Day', 'wpevents'); ?>/<?php _e('Month', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%a, %d %B %Y" <?php if($events_config['dateformat_sidebar'] == "%a, %d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%a, %d %B %Y", $timezone); ?></option>
-				        <option value="%A, %d %B %Y" <?php if($events_config['dateformat_sidebar'] == "%A, %d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%A, %d %B %Y", $timezone); ?></option>
-				        <option disabled="disabled">-- <?php _e('Preferred by locale', 'wpevents'); ?> --</option>
-				        <option value="%x" <?php if($events_config['dateformat_sidebar'] == "%x") { echo 'selected'; } ?>><?php echo gmstrftime("%x", $timezone); ?></option>
+				        <option value="D, d F Y" <?php if($events_config['dateformat_sidebar'] == "D, d F Y") { echo 'selected'; } ?>><?php echo date_i18n("D, d F Y", $timezone); ?></option>
+				        <option value="l, d F Y" <?php if($events_config['dateformat_sidebar'] == "l, d F Y") { echo 'selected'; } ?>><?php echo date_i18n("l, d F Y", $timezone); ?></option>
 					</select></td>
 					<?php } else { ?>
- 			        <td><input name="events_dateformat_sidebar" type="text" value="<?php echo $events_config['dateformat_sidebar'];?>" size="30" /><br /><?php _e('Careful what you put here!', 'wpevents'); ?> <?php _e('Learn', 'wpevents'); ?>: <a href="http://www.php.net/manual/en/function.strftime.php" target="_blank"><?php _e('php manual', 'wpevents'); ?></a>.</td>
+ 			        <td><input name="events_dateformat_sidebar" type="text" value="<?php echo $events_config['dateformat_sidebar'];?>" size="30" /><br /><?php _e('Careful what you put here!', 'wpevents'); ?> <?php _e('Make your own date formats', 'wpevents'); ?>: <a href="https://codex.wordpress.org/Formatting_Date_and_Time" target="_blank"><?php _e('manual', 'wpevents'); ?></a>.</td>
  			        <?php } ?>
 			        <th scope="row"><?php _e('Date system', 'wpevents'); ?></th>
 			        <td><select name="events_custom_date_sidebar">
@@ -825,13 +833,11 @@ function events_options() {
 			        <th scope="row"><?php _e('Time format', 'wpevents'); ?></th>
 			        <td colspan="3"><select name="events_timeformat_sidebar">
 				        <option disabled="disabled">-- <?php _e('24-hour clock', 'wpevents'); ?> --</option>
-				        <option value="%H:%M" <?php if($events_config['timeformat_sidebar'] == "%H:%M") { echo 'selected'; } ?>><?php echo gmstrftime("%H:%M", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
-				        <option value="%H:%M:%S" <?php if($events_config['timeformat_sidebar'] == "%H:%M:%S") { echo 'selected'; } ?>><?php echo gmstrftime("%H:%M:%S", $timezone); ?></option>
+				        <option value="H:i" <?php if($events_config['timeformat_sidebar'] == "H:i") { echo 'selected'; } ?>><?php echo date_i18n("H:i", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
+				        <option value="H:i:s" <?php if($events_config['timeformat_sidebar'] == "H:i:s") { echo 'selected'; } ?>><?php echo date_i18n("H:i:s", $timezone); ?></option>
 				        <option disabled="disabled">-- <?php _e('12-hour clock', 'wpevents'); ?> --</option>
-				        <option value="%I:%M %p" <?php if($events_config['timeformat_sidebar'] == "%I:%M %p") { echo 'selected'; } ?>><?php echo gmstrftime("%I:%M %p", $timezone); ?></option>
-				        <option value="%I:%M:%S %p" <?php if($events_config['timeformat_sidebar'] == "%I:%M:%S %p") { echo 'selected'; } ?>><?php echo gmstrftime("%I:%M:%S %p", $timezone); ?></option>
-				        <option disabled="disabled">-- <?php _e('Preferred by locale', 'wpevents'); ?> --</option>
-				        <option value="%X" <?php if($events_config['timeformat_sidebar'] == "%X") { echo 'selected'; } ?>><?php echo gmstrftime("%X", $timezone); ?></option>
+				        <option value="h:i a" <?php if($events_config['timeformat_sidebar'] == "h:i a") { echo 'selected'; } ?>><?php echo date_i18n("h:i a", $timezone); ?></option>
+				        <option value="h:i:s a" <?php if($events_config['timeformat_sidebar'] == "h:i:s a") { echo 'selected'; } ?>><?php echo date_i18n("h:i:s a", $timezone); ?></option>
 					</select></td>
 		      	</tr>
 		      	<tr valign="top">
@@ -858,21 +864,19 @@ function events_options() {
 			        <?php if($events_config['custom_date_page'] == 'no') { ?>
 			        <td><select name="events_dateformat">
 				        <option disabled="disabled">-- <?php _e('Day', 'wpevents'); ?>/<?php _e('Month', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%d %m %Y" <?php if($events_config['dateformat'] == "%d %m %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %m %Y", $timezone); ?></option>
-				        <option value="%d %b %Y" <?php if($events_config['dateformat'] == "%d %b %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %b %Y", $timezone); ?></option>
-				        <option value="%d %B %Y" <?php if($events_config['dateformat'] == "%d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %B %Y", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
+				        <option value="d m Y" <?php if($events_config['dateformat'] == "d m Y") { echo 'selected'; } ?>><?php echo date_i18n("d m Y", $timezone); ?></option>
+				        <option value="d M Y" <?php if($events_config['dateformat'] == "d M Y") { echo 'selected'; } ?>><?php echo date_i18n("d M Y", $timezone); ?></option>
+				        <option value="d F Y" <?php if($events_config['dateformat'] == "d F Y") { echo 'selected'; } ?>><?php echo date_i18n("d F Y", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
 				        <option disabled="disabled">-- <?php _e('Month', 'wpevents'); ?>/<?php _e('Day', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%m %d %Y" <?php if($events_config['dateformat'] == "%m %d %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%m %d %Y", $timezone); ?></option>
-				        <option value="%b %d %Y" <?php if($events_config['dateformat'] == "%d %b %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%d %b %Y", $timezone); ?></option>
-				        <option value="%B %d %Y" <?php if($events_config['dateformat'] == "%B %d %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%B %d %Y", $timezone); ?></option>
+				        <option value="m d Y" <?php if($events_config['dateformat'] == "m d Y") { echo 'selected'; } ?>><?php echo date_i18n("m d Y", $timezone); ?></option>
+				        <option value="M d Y" <?php if($events_config['dateformat'] == "M d Y") { echo 'selected'; } ?>><?php echo date_i18n("M d Y", $timezone); ?></option>
+				        <option value="F d Y" <?php if($events_config['dateformat'] == "F d Y") { echo 'selected'; } ?>><?php echo date_i18n("F d Y", $timezone); ?></option>
 				        <option disabled="disabled">-- <?php _e('Weekday', 'wpevents'); ?> <?php _e('Day', 'wpevents'); ?>/<?php _e('Month', 'wpevents'); ?>/<?php _e('Year', 'wpevents'); ?> --</option>
-				        <option value="%a, %d %B %Y" <?php if($events_config['dateformat'] == "%a, %d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%a, %d %B %Y", $timezone); ?></option>
-				        <option value="%A, %d %B %Y" <?php if($events_config['dateformat'] == "%A, %d %B %Y") { echo 'selected'; } ?>><?php echo gmstrftime("%A, %d %B %Y", $timezone); ?></option>
-				        <option disabled="disabled">-- <?php _e('Preferred by locale', 'wpevents'); ?> --</option>
-				        <option value="%x" <?php if($events_config['dateformat'] == "%x") { echo 'selected'; } ?>><?php echo gmstrftime("%x", $timezone); ?></option>
+				        <option value="D, d F Y" <?php if($events_config['dateformat'] == "D, d F Y") { echo 'selected'; } ?>><?php echo date_i18n("D, d F Y", $timezone); ?></option>
+				        <option value="l, d F Y" <?php if($events_config['dateformat'] == "l, d F Y") { echo 'selected'; } ?>><?php echo date_i18n("l, d F Y", $timezone); ?></option>
 					</select></td>
 					<?php } else { ?>
- 			        <td><input name="events_dateformat" type="text" value="<?php echo $events_config['dateformat'];?>" size="30" /><br /><?php _e('Careful what you put here!', 'wpevents'); ?> <?php _e('Learn', 'wpevents'); ?>: <a href="http://www.php.net/manual/en/function.strftime.php" target="_blank"><?php _e('php manual', 'wpevents'); ?></a>.</td>
+ 			        <td><input name="events_dateformat" type="text" value="<?php echo $events_config['dateformat'];?>" size="30" /><br /><?php _e('Careful what you put here!', 'wpevents'); ?> <?php _e('Make your own date formats', 'wpevents'); ?>: <a href="https://codex.wordpress.org/Formatting_Date_and_Time" target="_blank"><?php _e('manual', 'wpevents'); ?></a>.</td>
  			        <?php } ?>
 			        <th scope="row"><?php _e('Date system', 'wpevents'); ?></th>
 			        <td><select name="events_custom_date_page">
@@ -889,13 +893,11 @@ function events_options() {
 			        <th scope="row"><?php _e('Time format', 'wpevents'); ?></th>
 			        <td colspan="3"><select name="events_timeformat">
 				        <option disabled="disabled">-- <?php _e('24-hour clock', 'wpevents'); ?> --</option>
-				        <option value="%H:%M" <?php if($events_config['timeformat'] == "%H:%M") { echo 'selected'; } ?>><?php echo gmstrftime("%H:%M", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
-				        <option value="%H:%M:%S" <?php if($events_config['timeformat'] == "%H:%M:%S") { echo 'selected'; } ?>><?php echo gmstrftime("%H:%M:%S", $timezone); ?></option>
+				        <option value="H:i" <?php if($events_config['timeformat'] == "H:i") { echo 'selected'; } ?>><?php echo date_i18n("H:i", $timezone); ?> (<?php _e('default', 'wpevents'); ?>)</option>
+				        <option value="H:i:s" <?php if($events_config['timeformat'] == "H:i:s") { echo 'selected'; } ?>><?php echo date_i18n("H:i:s", $timezone); ?></option>
 				        <option disabled="disabled">-- <?php _e('12-hour clock', 'wpevents'); ?> --</option>
-				        <option value="%I:%M %p" <?php if($events_config['timeformat'] == "%I:%M %p") { echo 'selected'; } ?>><?php echo gmstrftime("%I:%M %p", $timezone); ?></option>
-				        <option value="%I:%M:%S %p" <?php if($events_config['timeformat'] == "%I:%M:%S %p") { echo 'selected'; } ?>><?php echo gmstrftime("%I:%M:%S %p", $timezone); ?></option>
-				        <option disabled="disabled">-- <?php _e('Preferred by locale', 'wpevents'); ?> --</option>
-				        <option value="%X" <?php if($events_config['timeformat'] == "%X") { echo 'selected'; } ?>><?php echo gmstrftime("%X", $timezone); ?></option>
+				        <option value="h:i a" <?php if($events_config['timeformat'] == "h:i a") { echo 'selected'; } ?>><?php echo date_i18n("h:i a", $timezone); ?></option>
+				        <option value="h:i:s a" <?php if($events_config['timeformat'] == "h:i:s a") { echo 'selected'; } ?>><?php echo date_i18n("h:i:s a", $timezone); ?></option>
 					</select></td>
 		      	</tr>
 		      	<tr valign="top">
@@ -1102,13 +1104,12 @@ function events_options() {
 			        <th scope="row" valign="top"><?php _e('Footer', 'wpevents'); ?>:</th>
 			        <td><textarea name="daily_f_template" cols="50" rows="4"><?php echo stripslashes($events_template['daily_f_template']); ?></textarea></td>
 		      	</tr>
-		      			      	
-		      	
 		      	<tr valign="top">
 			        <th scope="row" valign="top"><?php _e('Location separator', 'wpevents'); ?>:</th>
 			        <td><input name="location_seperator" type="text" value="<?php echo stripslashes($events_template['location_seperator']);?>" size="6" /> (<?php _e('default', 'wpevents'); ?>: @ )<br /><em><?php _e('Can be text also.', 'wpevents'); ?> <?php _e('Ending spaces allowed.', 'wpevents'); ?></em></td>
 		      	</tr>
 			</table>
+
 		    <p class="submit">
 		      	<input type="submit" name="Submit" class="button-primary" value="<?php _e('Update Templates', 'wpevents'); ?> &raquo;" />
 		    </p>
@@ -1192,6 +1193,7 @@ function events_options() {
 			        <td><input name="events_language_allday" type="text" value="<?php echo stripslashes($events_language['language_allday']);?>" size="45" /> (<?php _e('default', 'wpevents'); ?>: <?php _e('All-day event!', 'wpevents'); ?>)</td>
 		      	</tr>
 	    	</table>
+
 		    <p class="submit">
 		      	<input type="submit" name="Submit" class="button-primary" value="<?php _e('Update Language', 'wpevents'); ?> &raquo;" />
 		    </p>

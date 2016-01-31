@@ -1,0 +1,1155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Events\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-03 21:10+0800\n"
+"PO-Revision-Date: 2016-01-03 21:10+0800\n"
+"Last-Translator: Arnan de Gans <info@ajdg.net>\n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;__ngettext_noop:1,2;_c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-events-functions.php:471
+msgid "Useful links"
+msgstr ""
+
+#: wp-events-functions.php:472
+msgid "Follow Arnan on Facebook"
+msgstr ""
+
+#: wp-events-functions.php:480
+msgid "Get help with Events"
+msgstr ""
+
+#: wp-events-functions.php:481
+msgid "My Philippines travel blog"
+msgstr ""
+
+#: wp-events-manage.php:248 wp-events-manage.php:251 wp-events-manage.php:255
+#: wp-events-manage.php:263 wp-events-manage.php:277 wp-events.php:1147
+msgid "on"
+msgstr "til"
+
+#: wp-events-manage.php:249 wp-events-manage.php:264
+msgid "Highlighted events"
+msgstr "Fremhævet arrangement"
+
+#: wp-events-manage.php:251 wp-events-manage.php:263
+msgid "Duration"
+msgstr "Varighed"
+
+#: wp-events-manage.php:253
+msgid "Important events"
+msgstr "Vigtige arrangementer"
+
+#: wp-events-manage.php:257 wp-events-widget.php:164
+msgid "Archive"
+msgstr "Arkiv"
+
+#: wp-events-manage.php:261
+msgid "Today's events"
+msgstr "Arrangementer idag"
+
+#: wp-events-manage.php:266
+msgid "@"
+msgstr "@"
+
+#: wp-events-manage.php:271 wp-events.php:1123
+msgid "today"
+msgstr "idag"
+
+#: wp-events-manage.php:272 wp-events.php:1127
+msgid "hours"
+msgstr "timer"
+
+#: wp-events-manage.php:273 wp-events.php:1131
+msgid "minutes"
+msgstr "minutter"
+
+#: wp-events-manage.php:274 wp-events.php:1135
+msgid "day"
+msgstr "dag"
+
+#: wp-events-manage.php:275 wp-events.php:1139
+msgid "days"
+msgstr "dage"
+
+#: wp-events-manage.php:276 wp-events.php:1143
+msgid "and"
+msgstr "og"
+
+#: wp-events-manage.php:278 wp-events.php:1151
+msgid "in"
+msgstr "i"
+
+#: wp-events-manage.php:279 wp-events.php:1155
+msgid "ago"
+msgstr "siden"
+
+#: wp-events-manage.php:280 wp-events.php:1159
+msgid "more"
+msgstr "mere"
+
+#: wp-events-manage.php:281 wp-events.php:1163
+msgid "More information"
+msgstr "Mere information"
+
+#: wp-events-manage.php:282 wp-events.php:1167
+msgid "No events to show"
+msgstr "Ingen arrangementer at vise"
+
+#: wp-events-manage.php:283 wp-events.php:1175
+msgid "No events today"
+msgstr "Ingen arrangementer idag"
+
+#: wp-events-manage.php:284 wp-events.php:1179
+msgid "No events in the archive"
+msgstr "Ingen arrangementer i arkivet"
+
+#: wp-events-manage.php:285 wp-events.php:1183
+msgid "A configuration error occurred"
+msgstr "En konfigurations-fejl fandt sted"
+
+#: wp-events-manage.php:286 wp-events.php:1187
+msgid "No duration!"
+msgstr "Ingen varighed!"
+
+#: wp-events-manage.php:287 wp-events.php:1191
+msgid "All-day event!"
+msgstr "Hel-dags arrangement!"
+
+#: wp-events-manage.php:288 wp-events.php:1171
+msgid "Past event!"
+msgstr "Tidligere arrangement!"
+
+#: wp-events-setup.php:85 wp-events.php:1211
+msgid "WARNING!"
+msgstr "ADVARSEL!"
+
+#: wp-events-setup.php:85
+msgid ""
+"The MySQL table was not created! You cannot store events. See if you have "
+"the right MySQL access rights and check if you can create tables."
+msgstr ""
+"MySQL tabellen var ikke oprettet. Du kan ikke gemme arrangementer. Tjek om "
+"du har rettigheder til MySQL adgang, og tjek om du kan oprette tabeller."
+
+#: wp-events-setup.php:85
+msgid "Contact your webhost/sysadmin if you must."
+msgstr "Kontakt din Webhost/administrator hvis du bliver nødt til det."
+
+#: wp-events-setup.php:85
+#, php-format
+msgid "If this brings no answers seek support at <a href=\"%s\">%s</a>"
+msgstr ""
+"Hvis dette ikke hjælper dig til at finde et svar, så søg support ved <a href="
+"\"%s\">%s</a>"
+
+#: wp-events-setup.php:85
+msgid "Please give as much information as you can related to your problem."
+msgstr "Giv så meget information om dit problem som du kan."
+
+#: wp-events-widget.php:41
+#, php-format
+msgid "Options are found <a href=\"%s\">here</a>"
+msgstr "Indstillinger er fundet <a href=\"%s\">her</a>"
+
+#: wp-events-widget.php:41
+msgid "Save your other widget settings first!"
+msgstr "Gem indstillingerne for dine andre widgets først!"
+
+#: wp-events-widget.php:44
+msgid "Add a list of Events to your Sidebar"
+msgstr "Tilføj en liste over arrangementer til din sidebar"
+
+#: wp-events-widget.php:45 wp-events-widget.php:46
+msgid "Events List"
+msgstr "Arrangement liste"
+
+#: wp-events-widget.php:60 wp-events.php:59 wp-events.php:60 wp-events.php:61
+#: wp-events.php:62 wp-events.php:64 wp-events.php:215
+msgid "Events"
+msgstr "Arrangement"
+
+#: wp-events-widget.php:63
+msgid "Meandmymac.net RSS Feed"
+msgstr "Meandmymac.net RSS Feed"
+
+#: wp-events-widget.php:112 wp-events.php:118 wp-events.php:378
+msgid "Title"
+msgstr "Titel"
+
+#: wp-events-widget.php:117
+msgid "Event"
+msgstr "Arrangement"
+
+#: wp-events-widget.php:122
+msgid "When"
+msgstr "Hvornår"
+
+#: wp-events-widget.php:126 wp-events.php:407 wp-events.php:518
+msgid "January"
+msgstr "Januar"
+
+#: wp-events-widget.php:127 wp-events.php:408 wp-events.php:519
+msgid "February"
+msgstr "Februar"
+
+#: wp-events-widget.php:128 wp-events.php:409 wp-events.php:520
+msgid "March"
+msgstr "Marts"
+
+#: wp-events-widget.php:129 wp-events.php:410 wp-events.php:521
+msgid "April"
+msgstr "April"
+
+#: wp-events-widget.php:130 wp-events.php:411 wp-events.php:522
+msgid "May"
+msgstr "Maj"
+
+#: wp-events-widget.php:131 wp-events.php:412 wp-events.php:523
+msgid "June"
+msgstr "Juni"
+
+#: wp-events-widget.php:132 wp-events.php:413 wp-events.php:524
+msgid "July"
+msgstr "Juli"
+
+#: wp-events-widget.php:133 wp-events.php:414 wp-events.php:525
+msgid "August"
+msgstr "August"
+
+#: wp-events-widget.php:134 wp-events.php:415 wp-events.php:526
+msgid "September"
+msgstr "September"
+
+#: wp-events-widget.php:135 wp-events.php:416 wp-events.php:527
+msgid "October"
+msgstr "Oktober"
+
+#: wp-events-widget.php:136 wp-events.php:417 wp-events.php:528
+msgid "November"
+msgstr "November"
+
+#: wp-events-widget.php:137 wp-events.php:418 wp-events.php:529
+msgid "December"
+msgstr "December"
+
+#: wp-events-widget.php:142 wp-events.php:119 wp-events.php:667
+msgid "Category"
+msgstr "Kategori"
+
+#: wp-events-widget.php:151
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: wp-events-widget.php:155 wp-events-widget.php:159
+msgid "Yes, show in the sidebar"
+msgstr "Ja, vis i sidebaren"
+
+#: wp-events-widget.php:156 wp-events-widget.php:158
+msgid "No, on the event page only"
+msgstr "Nej, kun på arrangement siden"
+
+#: wp-events-widget.php:168 wp-events-widget.php:172
+msgid "No, delete one day after the event ends"
+msgstr "Nej, slet en dag efter arrangementet slutter"
+
+#: wp-events-widget.php:169 wp-events-widget.php:171
+msgid "Yes, save event for the archive"
+msgstr "Ja, gem arrangement i arkivet"
+
+#: wp-events-widget.php:178 wp-events.php:712 wp-events.php:715
+msgid "Save event"
+msgstr "Gem arrangement"
+
+#: wp-events-widget.php:178 wp-events.php:335
+msgid "Add event"
+msgstr "Tilføj arrangement"
+
+#: wp-events-widget.php:178 wp-events.php:823 wp-events.php:825
+#: wp-events.php:883 wp-events.php:885
+msgid "advanced"
+msgstr "advanceret"
+
+#: wp-events-widget.php:178 wp-events.php:60 wp-events.php:85 wp-events.php:348
+msgid "Manage Events"
+msgstr "Administrer arrangementer"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "You should create at least one category before adding events!"
+msgstr "Du skal tilføje mindst en kategori før du tilføjer arrangementer!"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "Add a category now"
+msgstr "Tilføj en kategori nu"
+
+#: wp-events.php:60
+msgid "Manage"
+msgstr "Administrer"
+
+#: wp-events.php:61
+msgid "Add/Edit"
+msgstr "Tilføj | Rediger"
+
+#: wp-events.php:61
+msgid "Add|Edit Event"
+msgstr "Tilføj | Rediger arrangement"
+
+#: wp-events.php:62 wp-events.php:180
+msgid "Categories"
+msgstr "Kategorier"
+
+#: wp-events.php:62
+msgid "Manage Categories"
+msgstr "Administrer kategorier"
+
+#: wp-events.php:88
+msgid "Event <strong>deleted</strong>"
+msgstr "Arrangement <strong>slettet</strong>"
+
+#: wp-events.php:90
+msgid "Event <strong>updated</strong>"
+msgstr "Arrangement <strong>opdateret</strong>"
+
+#: wp-events.php:92 wp-events.php:185 wp-events.php:352
+msgid "Action prohibited"
+msgstr "Handling udelukket"
+
+#: wp-events.php:99
+msgid "You are about to delete one or more events!"
+msgstr "Du er ved at slette en eller flere arrangementer!"
+
+#: wp-events.php:99 wp-events.php:198 wp-events.php:1216
+msgid "[OK] to continue, [Cancel] to stop."
+msgstr "[OK] for at fortsætte, [Anuller] for at stoppe."
+
+#: wp-events.php:99
+msgid "Delete events"
+msgstr "Slet arrangementer"
+
+#: wp-events.php:101 wp-events.php:102 wp-events.php:922 wp-events.php:923
+#: wp-events.php:937 wp-events.php:938
+msgid "by date"
+msgstr "efter dato"
+
+#: wp-events.php:101 wp-events.php:104 wp-events.php:201 wp-events.php:923
+#: wp-events.php:925 wp-events.php:938 wp-events.php:940
+msgid "descending"
+msgstr "faldende"
+
+#: wp-events.php:101 wp-events.php:786 wp-events.php:791 wp-events.php:806
+#: wp-events.php:822 wp-events.php:826 wp-events.php:834 wp-events.php:851
+#: wp-events.php:867 wp-events.php:882 wp-events.php:886 wp-events.php:894
+#: wp-events.php:910 wp-events.php:971 wp-events.php:981 wp-events.php:990
+#: wp-events.php:1000 wp-events.php:1107 wp-events.php:1123 wp-events.php:1127
+#: wp-events.php:1131 wp-events.php:1135 wp-events.php:1139 wp-events.php:1143
+#: wp-events.php:1147 wp-events.php:1151 wp-events.php:1155 wp-events.php:1159
+#: wp-events.php:1163 wp-events.php:1167 wp-events.php:1171 wp-events.php:1175
+#: wp-events.php:1179 wp-events.php:1183 wp-events.php:1187 wp-events.php:1191
+msgid "default"
+msgstr "standard"
+
+#: wp-events.php:102 wp-events.php:103 wp-events.php:200 wp-events.php:922
+#: wp-events.php:924 wp-events.php:937 wp-events.php:939
+msgid "ascending"
+msgstr "stigende"
+
+#: wp-events.php:103 wp-events.php:104 wp-events.php:200 wp-events.php:201
+#: wp-events.php:924 wp-events.php:925 wp-events.php:939 wp-events.php:940
+msgid "in the order you made them"
+msgstr "i rækkefølgen du har oprettet dem"
+
+#: wp-events.php:105 wp-events.php:106 wp-events.php:928 wp-events.php:929
+#: wp-events.php:943 wp-events.php:944
+msgid "by title"
+msgstr "efter titel"
+
+#: wp-events.php:107 wp-events.php:108
+msgid "by category"
+msgstr "efter kategori"
+
+#: wp-events.php:110 wp-events.php:205
+msgid "Sort"
+msgstr "Sorter"
+
+#: wp-events.php:117
+msgid "Date"
+msgstr "Dato"
+
+#: wp-events.php:120
+msgid "Starts when"
+msgstr "Starter når"
+
+#: wp-events.php:135 wp-events.php:230
+msgid "Edit"
+msgstr "Rediger"
+
+#: wp-events.php:141
+msgid "No Events yet!"
+msgstr "Ingen arrangementer endnu!"
+
+#: wp-events.php:145
+msgid "There was an error locating the main database table for Events."
+msgstr ""
+"Der opstod en fejl da tabellen for pluginet skulle findes i hoved-databasen."
+
+#: wp-events.php:145 wp-events.php:237
+msgid "Please deactivate and re-activate Events from the plugin page!!"
+msgstr "Vær venlig at deaktivere og genaktivere pluginet fra plugin siden!"
+
+#: wp-events.php:145 wp-events.php:237
+#, php-format
+msgid ""
+"If this does not solve the issue please seek support at <a href=\"%s\">%s</"
+"a>."
+msgstr ""
+"Hvis dette ikke løser dit problem, søg hjælp ved <a href=\"%s\">%s</a>."
+
+#: wp-events.php:183
+msgid "Category <strong>deleted</strong>"
+msgstr "Kategori <strong>slettet</strong>"
+
+#: wp-events.php:187
+msgid "Category <strong>created</strong>"
+msgstr "Kategori <strong>oprettet</strong>"
+
+#: wp-events.php:187
+msgid "Add events now"
+msgstr "Tilføj arrangementer nu"
+
+#: wp-events.php:189
+msgid "Category <strong>updated</strong>"
+msgstr "Kategori <strong>opdateret</strong>"
+
+#: wp-events.php:191
+msgid "No category name filled in"
+msgstr "Intet kategori navn fyldt ud"
+
+#: wp-events.php:198
+msgid ""
+"You are about to delete one or more categories! Make sure there are no "
+"events in those categories or they will not show on the website"
+msgstr ""
+"Du er ved at slette en eller flere kategorier! Vær sikker på der ikke er "
+"nogen arrangementer i disse kategorier, ellers vil de ikke blive vist på "
+"hjemmesiden"
+
+#: wp-events.php:198
+msgid "Delete category"
+msgstr "Slet kategori"
+
+#: wp-events.php:202 wp-events.php:203
+msgid "by name"
+msgstr "efter navn"
+
+#: wp-events.php:213 wp-events.php:274
+msgid "ID"
+msgstr "ID"
+
+#: wp-events.php:214 wp-events.php:278
+msgid "Name"
+msgstr "Navn"
+
+#: wp-events.php:237
+msgid ""
+"There was an error locating the database table for the Events categories."
+msgstr ""
+"Der opstod en fejl da tabellen til kategorier skulle findes i hoved-databasen"
+
+#: wp-events.php:241
+msgid "Add"
+msgstr "Tilføj"
+
+#: wp-events.php:257
+msgid "Please fill in a name for your category!"
+msgstr "Udfyld med et navn til din kategori!"
+
+#: wp-events.php:268
+msgid "You can change the name of the category here. The ID stays the same!"
+msgstr "Du kan skifte navn på kategorien her! ID'et forbliver det samme"
+
+#: wp-events.php:286
+msgid "Save Category"
+msgstr "Gem kategori"
+
+#: wp-events.php:287 wp-events.php:717
+msgid "Cancel"
+msgstr "Annuller"
+
+#: wp-events.php:295
+msgid "Error!"
+msgstr "Fejl!"
+
+#: wp-events.php:301
+msgid "No valid group ID specified!"
+msgstr "Ingen gyldig gruppe ID specificeret!"
+
+#: wp-events.php:301
+msgid "Continue"
+msgstr "Fortsæt"
+
+#: wp-events.php:340
+msgid "Edit event"
+msgstr "Rediger arrangement"
+
+#: wp-events.php:348
+msgid "Event <strong>created</strong>"
+msgstr "Arrangement <strong>oprettet</strong>"
+
+#: wp-events.php:350
+msgid "Event <strong>duplicated</strong>"
+msgstr "Arrangement <strong>duplikeret</strong>"
+
+#: wp-events.php:354
+msgid "Not all fields met the requirements"
+msgstr "Alle felter opfylder ikke kravene"
+
+#: wp-events.php:372
+msgid "Enter your event details below."
+msgstr "Skriv en beskrivelse til dit arrangement nedenunder."
+
+#: wp-events.php:379 wp-events.php:699
+#, php-format
+msgid "Maximum %s characters."
+msgstr "Maksimum %s karakterer."
+
+#: wp-events.php:380
+msgid "Make title a link."
+msgstr "Lav titel til et link."
+
+#: wp-events.php:380
+msgid "Use the field below."
+msgstr "Brug feltet nedenunder."
+
+#: wp-events.php:380
+msgid "All-day event."
+msgstr "Hel-dags arrangement."
+
+#: wp-events.php:397
+msgid ""
+"Please note that the time field uses a 24 hour clock. This means that 22:00 "
+"hour is actually 10:00pm."
+msgstr ""
+"Bemærk at tidsfeltet bruger et 24 timers ur. Dette betyder at 22:00 er "
+"faktisk 10:00pm."
+
+#: wp-events.php:397
+msgid ""
+"Hint: If you're used to the AM/PM system and the event takes place/starts "
+"after lunch just add 12 hours."
+msgstr ""
+"Tip: Hvis du er vant til AM/PM systemet og arrangementet finder sted efter "
+"middag, så tilføj 12 timer."
+
+#: wp-events.php:403
+msgid "Startdate"
+msgstr "Start dato"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+#: wp-events.php:1134
+msgid "Day"
+msgstr "Dag"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Month"
+msgstr "Måned"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Year"
+msgstr "År"
+
+#: wp-events.php:422 wp-events.php:532
+msgid "Hour"
+msgstr "Timer"
+
+#: wp-events.php:422 wp-events.php:532 wp-events.php:1130
+msgid "Minutes"
+msgstr "Minutter"
+
+#: wp-events.php:422 wp-events.php:513 wp-events.php:532 wp-events.php:626
+#: wp-events.php:634 wp-events.php:665 wp-events.php:697 wp-events.php:702
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "optional"
+msgstr "valgfrit"
+
+#: wp-events.php:513
+msgid "Enddate"
+msgstr "Slut dato"
+
+#: wp-events.php:626
+msgid "Repeat"
+msgstr "Gentag"
+
+#: wp-events.php:628
+msgid "Don't repeat"
+msgstr "Gentag ikke"
+
+#: wp-events.php:629
+msgid "Every day"
+msgstr "Hver dag"
+
+#: wp-events.php:630
+msgid "Every week"
+msgstr "Hver uge"
+
+#: wp-events.php:631
+msgid "Every 4 Weeks"
+msgstr "Hver 4 uge"
+
+#: wp-events.php:632
+msgid "Every year"
+msgstr "Hver år"
+
+#: wp-events.php:634
+msgid "This many times"
+msgstr "Så mange gange"
+
+#: wp-events.php:665
+msgid "Location"
+msgstr "Sted"
+
+#: wp-events.php:666
+msgid "Maximum 255 characters."
+msgstr "Maksimum 255 karakterer."
+
+#: wp-events.php:675
+msgid "Show in the sidebar"
+msgstr "Vis i sidebaren"
+
+#: wp-events.php:678 wp-events.php:682 wp-events.php:688 wp-events.php:692
+msgid "Yes"
+msgstr "Ja"
+
+#: wp-events.php:679 wp-events.php:681 wp-events.php:689 wp-events.php:691
+msgid "No"
+msgstr "Nej"
+
+#: wp-events.php:685
+msgid "Archive this event"
+msgstr "Arkiver dette arrangement"
+
+#: wp-events.php:697
+msgid "Message when event ends"
+msgstr "Besked når arrangementet udløber"
+
+#: wp-events.php:699
+msgid "HTML allowed"
+msgstr "HTML tilladt"
+
+#: wp-events.php:702
+msgid "Link to page"
+msgstr "Link til side"
+
+#: wp-events.php:704
+msgid "Include full url and http://, this can be any page."
+msgstr "Inkluder fuld url og http://, dette kan være hvilken som helst side."
+
+#: wp-events.php:704
+msgid "Required if checkbox above is checked!"
+msgstr "Påkrævet hvis checkboksen oven over er markeret!"
+
+#: wp-events.php:713
+msgid "Save as Duplicate"
+msgstr ""
+
+#: wp-events.php:725
+msgid ""
+"Tip: If you do not want to use categories create one \"uncategorized\" and "
+"put all events in there. You don't have to show the categories on your blog."
+msgstr ""
+"Tip: Hvis du ikke vil bruge kategorier, opret en \"ukategoriseret\" og læg "
+"alle dine arrangementer in here. Du behøver ikke at vise kategorierne på din "
+"blog."
+
+#: wp-events.php:732
+msgid "This is not an event created by you. Therefor you cannot edit it."
+msgstr ""
+"Dette er ikke et arrangement oprettet af dig. Derfor kan du ikke redigere i "
+"det."
+
+#: wp-events.php:760
+msgid "Events options"
+msgstr "Plugin indstillinger"
+
+#: wp-events.php:765
+msgid "General"
+msgstr "Generelt"
+
+#: wp-events.php:766 wp-events.php:1014
+msgid "Templates"
+msgstr "Skabeloner"
+
+#: wp-events.php:767 wp-events.php:1117
+msgid "Language"
+msgstr "Sprog"
+
+#: wp-events.php:768
+msgid "Uninstall"
+msgstr "Afinstaller"
+
+#: wp-events.php:774
+msgid "Main config"
+msgstr "Hoved konfiguration"
+
+#: wp-events.php:780
+msgid "Options for the sidebar and widget"
+msgstr "Indstillinger for sidebaren og widget"
+
+#: wp-events.php:785
+msgid "Show this many events"
+msgstr "Vis dette antal arrangementer"
+
+#: wp-events.php:789
+msgid "Show"
+msgstr "Vis"
+
+#: wp-events.php:791
+msgid "Future events including events that happen today"
+msgstr ""
+"Fremtidige arrangementer, inkluderet arrangementer der finder sted idag"
+
+#: wp-events.php:792
+msgid "Events that didn't start yet"
+msgstr "Arrangementer der ikke er startet endnu"
+
+#: wp-events.php:793
+msgid "Events that didn't end yet"
+msgstr "Arrangementer der ikke er sluttet endnu"
+
+#: wp-events.php:794
+msgid "The archive"
+msgstr "Arkivet"
+
+#: wp-events.php:795
+msgid "Just today's events"
+msgstr "Bare arrangementer idag"
+
+#: wp-events.php:796
+msgid "The next 7 days"
+msgstr "De næste 7 dage"
+
+#: wp-events.php:797
+msgid "Upcoming and/or Archived events"
+msgstr "Kommende og/eller arkiveret arrangementer"
+
+#: wp-events.php:801 wp-events.php:861
+msgid "Date format"
+msgstr "Dato format"
+
+#: wp-events.php:812 wp-events.php:872
+msgid "Weekday"
+msgstr "Ugedag"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Careful what you put here!"
+msgstr "Vær forsigtig med hvad du propper ind her!"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Make your own date formats"
+msgstr ""
+
+#: wp-events.php:817 wp-events.php:877
+msgid "manual"
+msgstr ""
+
+#: wp-events.php:819 wp-events.php:879
+msgid "Date system"
+msgstr "Dato system"
+
+#: wp-events.php:828 wp-events.php:888
+msgid "Save options to see the result!"
+msgstr "Gem indstillingerne for at se resultatet!"
+
+#: wp-events.php:831 wp-events.php:891
+msgid "Time format"
+msgstr "Tids format"
+
+#: wp-events.php:833 wp-events.php:893
+msgid "24-hour clock"
+msgstr "24-timers ur"
+
+#: wp-events.php:836 wp-events.php:896
+msgid "12-hour clock"
+msgstr "12-timers ur"
+
+#: wp-events.php:842 wp-events.php:902
+msgid "Date parsing"
+msgstr "Dato analysering"
+
+#: wp-events.php:844
+msgid "Never show the ending date/time (Default)"
+msgstr "Vis aldrig slut dato/tid (Standard)"
+
+#: wp-events.php:845 wp-events.php:904
+msgid "Hide the ending date if it's the same as the starting date"
+msgstr "Gem slut datoen hvis den er den samme som start datoen"
+
+#: wp-events.php:846 wp-events.php:905
+msgid "Show the ending date even if it's the same as the starting date"
+msgstr "Vis slut datoen, også selvom den er det samme som start datoen"
+
+#: wp-events.php:850 wp-events.php:909
+msgid "Character limit"
+msgstr "Karakter begrænsning"
+
+#: wp-events.php:856
+msgid "Options for the page lists"
+msgstr "Indstillinger for side listerne"
+
+#: wp-events.php:915
+msgid "Global or other options"
+msgstr "Globale eller andre indstillinger"
+
+#: wp-events.php:920
+msgid "Order events"
+msgstr "Arranger arrangementer"
+
+#: wp-events.php:926 wp-events.php:927 wp-events.php:941 wp-events.php:942
+msgid "by author"
+msgstr "efter udgiver"
+
+#: wp-events.php:930 wp-events.php:931 wp-events.php:945 wp-events.php:946
+msgid "by description"
+msgstr "efter beskrivelse"
+
+#: wp-events.php:935
+msgid "Order archive"
+msgstr "Arranger arkiv"
+
+#: wp-events.php:950
+msgid "Links open in"
+msgstr "Links åbner i"
+
+#: wp-events.php:952
+msgid "new window"
+msgstr "nyt vindue"
+
+#: wp-events.php:953
+msgid "same window"
+msgstr "samme vindue"
+
+#: wp-events.php:954
+msgid "parent window"
+msgstr "overordnet vindue"
+
+#: wp-events.php:960
+msgid "User Access"
+msgstr "Bruger adgang"
+
+#: wp-events.php:965
+msgid ""
+"Set these options to prevent certain userlevels from editing, creating or "
+"deleting events. The options panel user level cannot be changed."
+msgstr ""
+"Indstil disse indstillinger hvis du vil forbyde visse roller rettighederne "
+"til at redigere, oprette eller slette arrangementer. Indstillings panel "
+"rolle begrænsning kan ikke ændres."
+
+#: wp-events.php:965
+#, php-format
+msgid "For more information on user roles go to <a href=\"%s\">the codex</a>."
+msgstr "For mere information om roller gå til <a href=\"%s\">vores codex</a>."
+
+#: wp-events.php:968
+msgid "Add Events"
+msgstr "Tilføj arrangementer"
+
+#: wp-events.php:970 wp-events.php:980 wp-events.php:990 wp-events.php:1000
+msgid "Administrator"
+msgstr "Administrator"
+
+#: wp-events.php:971 wp-events.php:981 wp-events.php:991 wp-events.php:1001
+msgid "Editor"
+msgstr "Redaktør"
+
+#: wp-events.php:972 wp-events.php:982 wp-events.php:992 wp-events.php:1002
+msgid "Author"
+msgstr "Forfatter"
+
+#: wp-events.php:973 wp-events.php:983 wp-events.php:993 wp-events.php:1003
+msgid "Contributor"
+msgstr "Bidragyder"
+
+#: wp-events.php:974 wp-events.php:984 wp-events.php:994 wp-events.php:1004
+msgid "Subscriber"
+msgstr "Abonnent"
+
+#: wp-events.php:975
+msgid "Can add events and edit events they created."
+msgstr ""
+"Kan tilføje arrangementer og redigere arrangementer som de selv har oprettet."
+
+#: wp-events.php:978
+msgid "Edit events"
+msgstr "Rediger arrangementer"
+
+#: wp-events.php:985
+msgid "Can add/edit/review anyone's events."
+msgstr "Kan tilføje/redigere/vurdere andres arrangementer."
+
+#: wp-events.php:988
+msgid "Manage events"
+msgstr "Administrer arrangementer"
+
+#: wp-events.php:995
+msgid "Can add/edit/review/delete anyone's events."
+msgstr "Kan tilføje/redigere/vurdere/slette andres arrangementer."
+
+#: wp-events.php:998
+msgid "Manage categories"
+msgstr "Administrer kategorier"
+
+#: wp-events.php:1005
+msgid "Can add/remove categories."
+msgstr "Kan tilføje/slette kategorier."
+
+#: wp-events.php:1009
+msgid "Update Options"
+msgstr "Opdater indstillinger"
+
+#: wp-events.php:1021
+msgid "Sidebar and widget"
+msgstr "Sidebar og widget"
+
+#: wp-events.php:1026 wp-events.php:1044 wp-events.php:1067 wp-events.php:1090
+msgid "Header"
+msgstr "Header"
+
+#: wp-events.php:1029 wp-events.php:1052 wp-events.php:1075 wp-events.php:1098
+msgid "Body"
+msgstr "Body"
+
+#: wp-events.php:1030 wp-events.php:1045 wp-events.php:1053 wp-events.php:1068
+#: wp-events.php:1076 wp-events.php:1091 wp-events.php:1099
+msgid "Options"
+msgstr "Indstillinger"
+
+#: wp-events.php:1033 wp-events.php:1056 wp-events.php:1079 wp-events.php:1102
+msgid "Footer"
+msgstr "Footer"
+
+#: wp-events.php:1039 wp-events.php:1062 wp-events.php:1085
+msgid "Page"
+msgstr "Side"
+
+#: wp-events.php:1039
+msgid "main list"
+msgstr "hoved liste"
+
+#: wp-events.php:1039
+msgid "Week"
+msgstr "Uge"
+
+#: wp-events.php:1039
+msgid "7 days ahead"
+msgstr "7 dage forude"
+
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "Default title"
+msgstr "Standard titel"
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "This only works if you use %category% in the header."
+msgstr "Dette virker kun hvis du bruger %category% i headeren."
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "No HTML allowed."
+msgstr "Ingen HTML tilladt."
+
+#: wp-events.php:1062
+msgid "archive list"
+msgstr "arkiv liste"
+
+#: wp-events.php:1085
+msgid "today's list"
+msgstr "listen idag"
+
+#: wp-events.php:1106
+msgid "Location separator"
+msgstr "Lokalitions seperator"
+
+#: wp-events.php:1107
+msgid "Can be text also."
+msgstr "Kan også være tekst."
+
+#: wp-events.php:1107
+msgid "Ending spaces allowed."
+msgstr "Slut mellemrum tilladt."
+
+#: wp-events.php:1112
+msgid "Update Templates"
+msgstr "Opdater skabeloner"
+
+#: wp-events.php:1122
+msgid "Today"
+msgstr "Idag"
+
+#: wp-events.php:1126
+msgid "Hours"
+msgstr "Timer"
+
+#: wp-events.php:1138
+msgid "Days"
+msgstr "Dage"
+
+#: wp-events.php:1142
+msgid "And"
+msgstr "Og"
+
+#: wp-events.php:1146
+msgid "On"
+msgstr "Til"
+
+#: wp-events.php:1150
+msgid "In"
+msgstr "I"
+
+#: wp-events.php:1154
+msgid "Ago"
+msgstr "Siden"
+
+#: wp-events.php:1158
+msgid "Sidebar link"
+msgstr "Sidebars link"
+
+#: wp-events.php:1162
+msgid "Page link"
+msgstr "Side link"
+
+#: wp-events.php:1166
+msgid "If there are no events to show"
+msgstr "Hvis der ikke er nogen arrangementer at vise"
+
+#: wp-events.php:1170
+msgid "If the event already happened"
+msgstr "Hvis arrangement allerede er fundet sted"
+
+#: wp-events.php:1174
+msgid "If there are no events today"
+msgstr "Hvis der ikke er nogen arrangementer idag"
+
+#: wp-events.php:1178
+msgid "If the archive is empty"
+msgstr "Hvis arkivet er tomt"
+
+#: wp-events.php:1182
+msgid "If there is an error"
+msgstr "Hvis der er en fejl"
+
+#: wp-events.php:1186
+msgid "If no duration is set for an event"
+msgstr "Hvis der ikke er sat nogen varighed på arrangementet"
+
+#: wp-events.php:1190
+msgid "If event is an all-day event"
+msgstr "Hvis arrangementet er et hel-dags arrangement"
+
+#: wp-events.php:1196
+msgid "Update Language"
+msgstr "Opdater sprog"
+
+#: wp-events.php:1203
+msgid "Uninstaller"
+msgstr "Afinstaller"
+
+#: wp-events.php:1208
+msgid ""
+"Events installs a table in MySQL. When you disable the plugin the table will "
+"not be deleted. To delete the table use the button below."
+msgstr ""
+"Pluginet installerer en tabel i MySQL. Når du deaktiverer pluginet vil "
+"tabellen ikke blive slettet. For at slette tabellen, så brug knappen "
+"nedenunder."
+
+#: wp-events.php:1211
+msgid ""
+"This process is irreversible and will delete ALL scheduled events and "
+"associated options!"
+msgstr ""
+"Denne proces er irreversibel og ville slette ALLE planlagte arrangementer og "
+"tilhørende indstillinger!"
+
+#: wp-events.php:1216
+msgid "You are about to uninstall the events plugin"
+msgstr "Du er ved at afinstallere pluginet"
+
+#: wp-events.php:1216
+msgid "All scheduled events will be lost!"
+msgstr "Alle planlagte arrangementer vil blive tabt!"
+
+#: wp-events.php:1216
+msgid "Uninstall Events"
+msgstr "Afinstaller pluginet"
+
+#~ msgid "Events for Excellent!"
+#~ msgstr "Find hjælp!"
+
+#~ msgid "Like my software? <a href=\"%s\">Show your appreciation</a>. Thanks!"
+#~ msgstr ""
+#~ "Glad for min software? <a href=\"%s\">Show your appreciation</a>. Tak!"
+
+#~ msgid "Preferred by locale"
+#~ msgstr "Foretrækkes af lokalitet"
+
+#~ msgid "Learn"
+#~ msgstr "Lær"
+
+#~ msgid "php manual"
+#~ msgstr "php manual"
+
+#~ msgid "Find me on <a href=\"%s\">%s</a>."
+#~ msgstr "Find mig på <a href=\"%s\">%s</a>."
+
+#~ msgid ""
+#~ "The plugin page at <a href=\"%s\">%s</a>. Getting started, manuals and "
+#~ "more..."
+#~ msgstr ""
+#~ "Plugin siden på <a href=\"%s\">%s</a>. Få hjælp til at komme igang, "
+#~ "manualer m.m."
+
+#~ msgid "<a href=\"%s\">%s</a> for updates and notes about Events!"
+#~ msgstr "<a href=\"%s\">%s</a> for opdateringer og noter omkring pluginet."
+
+#~ msgid "Need help? <a href=\"%s\">%s</a>. Use the knowledgebase!"
+#~ msgstr "Brug for hjælp? <a href=\"%s\">%s</a>. Brug vores viden-database!"
+
+#~ msgid "Translation: ---"
+#~ msgstr ""
+#~ "Oversat til dansk: Morten Rask | <a href=\"www.mortenrask.com\" target="
+#~ "\"_blank\">www.mortenrask.com</a>"
+
+#~ msgid "Want Events in your language? Check <a href=\"%s\">here</a>!"
+#~ msgstr "Vil du have pluginet på dit sprog? Tjek <a href=\"%s\">her</a>!"
+
+#~ msgid "Untitled"
+#~ msgstr "Unavngivet"
+
+#~ msgid ""
+#~ "The MySQL table was not properly upgraded! Events cannot work properly "
+#~ "without this upgrade. Check your MySQL permissions and see if you have "
+#~ "ALTER rights (rights to alter existing tables)."
+#~ msgstr ""
+#~ "MySQL tabellen var ikke opgraderet! Pluginet kan ikke virke uden "
+#~ "opgraderingen. Tjek dine MySQL rettigheder og tjek om du har rettelses "
+#~ "rettigheder (rettigheder til at rette eksisterende tabeller)."
+
+#~ msgid "and mention any errors you saw/got and explain what you were doing!"
+#~ msgstr "og nævn de fejl som du har fået og forklar hvad du lavede!"
+
+#~ msgid "An unexpected error occured"
+#~ msgstr "En uventet fejl opstod"
+
+#~ msgid "Duplicate event"
+#~ msgstr "Dupliker arrangement"

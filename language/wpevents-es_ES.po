@@ -1,0 +1,1208 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Events\n"
+"POT-Creation-Date: 2016-01-03 21:10+0800\n"
+"PO-Revision-Date: 2016-01-03 21:10+0800\n"
+"Last-Translator: Arnan de Gans <info@ajdg.net>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;__ngettext_noop:1,2;_c\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-events-functions.php:471
+msgid "Useful links"
+msgstr ""
+
+#: wp-events-functions.php:472
+msgid "Follow Arnan on Facebook"
+msgstr ""
+
+#: wp-events-functions.php:480
+msgid "Get help with Events"
+msgstr ""
+
+#: wp-events-functions.php:481
+msgid "My Philippines travel blog"
+msgstr ""
+
+#: wp-events-manage.php:248 wp-events-manage.php:251 wp-events-manage.php:255
+#: wp-events-manage.php:263 wp-events-manage.php:277 wp-events.php:1147
+msgid "on"
+msgstr "el"
+
+#: wp-events-manage.php:249 wp-events-manage.php:264
+msgid "Highlighted events"
+msgstr "Eventos destacados"
+
+#: wp-events-manage.php:251 wp-events-manage.php:263
+msgid "Duration"
+msgstr "Duración"
+
+#: wp-events-manage.php:253
+msgid "Important events"
+msgstr "Eventos importantes"
+
+#: wp-events-manage.php:257 wp-events-widget.php:164
+msgid "Archive"
+msgstr "Archivo"
+
+#: wp-events-manage.php:261
+msgid "Today's events"
+msgstr "Eventos de Hoy"
+
+#: wp-events-manage.php:266
+msgid "@"
+msgstr "@"
+
+#: wp-events-manage.php:271 wp-events.php:1123
+msgid "today"
+msgstr "hoy"
+
+#: wp-events-manage.php:272 wp-events.php:1127
+msgid "hours"
+msgstr "horas"
+
+#: wp-events-manage.php:273 wp-events.php:1131
+msgid "minutes"
+msgstr "minutos"
+
+#: wp-events-manage.php:274 wp-events.php:1135
+msgid "day"
+msgstr "día"
+
+#: wp-events-manage.php:275 wp-events.php:1139
+msgid "days"
+msgstr "días"
+
+#: wp-events-manage.php:276 wp-events.php:1143
+msgid "and"
+msgstr "y"
+
+#: wp-events-manage.php:278 wp-events.php:1151
+msgid "in"
+msgstr "en"
+
+#: wp-events-manage.php:279 wp-events.php:1155
+msgid "ago"
+msgstr "atrás"
+
+#: wp-events-manage.php:280 wp-events.php:1159
+msgid "more"
+msgstr "más"
+
+#: wp-events-manage.php:281 wp-events.php:1163
+msgid "More information"
+msgstr "Más información"
+
+#: wp-events-manage.php:282 wp-events.php:1167
+msgid "No events to show"
+msgstr "No hay eventos para mostrar"
+
+#: wp-events-manage.php:283 wp-events.php:1175
+msgid "No events today"
+msgstr "No hay eventos hoy"
+
+#: wp-events-manage.php:284 wp-events.php:1179
+msgid "No events in the archive"
+msgstr "No hay eventos en el archivo"
+
+#: wp-events-manage.php:285 wp-events.php:1183
+msgid "A configuration error occurred"
+msgstr "Ocurrió un error de configuración"
+
+#: wp-events-manage.php:286 wp-events.php:1187
+msgid "No duration!"
+msgstr "¡Sin duración establecida!"
+
+#: wp-events-manage.php:287 wp-events.php:1191
+msgid "All-day event!"
+msgstr "¡Todo el día!"
+
+#: wp-events-manage.php:288 wp-events.php:1171
+msgid "Past event!"
+msgstr "¡El evento ya pasó!"
+
+#: wp-events-setup.php:85 wp-events.php:1211
+msgid "WARNING!"
+msgstr "¡ADVERTENCIA!"
+
+#: wp-events-setup.php:85
+msgid ""
+"The MySQL table was not created! You cannot store events. See if you have "
+"the right MySQL access rights and check if you can create tables."
+msgstr ""
+"¡La tabla de MySQL no se ha creado! No es posible guardar los eventos. "
+"Verifique si usted tiene derechos de acceso MySQL y compruebe si puede crear "
+"tablas."
+
+#: wp-events-setup.php:85
+msgid "Contact your webhost/sysadmin if you must."
+msgstr ""
+"Póngase en contacto con el administrador de sistemas o su proveedor de "
+"hosting si fuera necesario."
+
+#: wp-events-setup.php:85
+#, php-format
+msgid "If this brings no answers seek support at <a href=\"%s\">%s</a>"
+msgstr "Si no resuelve el problema, visite <a href=\"%s\">%s</a> para soporte"
+
+#: wp-events-setup.php:85
+msgid "Please give as much information as you can related to your problem."
+msgstr ""
+"Por favor, detalle la mayor información posible relacionada con su problema."
+
+#: wp-events-widget.php:41
+#, php-format
+msgid "Options are found <a href=\"%s\">here</a>"
+msgstr "Configure las opciones <a href=\"%s\">aquí</a>"
+
+#: wp-events-widget.php:41
+msgid "Save your other widget settings first!"
+msgstr "¡Guarde los ajustes de los otros widgets primero!"
+
+#: wp-events-widget.php:44
+msgid "Add a list of Events to your Sidebar"
+msgstr "Agrega un listado de Eventos en su Barra Lateral"
+
+#: wp-events-widget.php:45 wp-events-widget.php:46
+msgid "Events List"
+msgstr "Listado de Eventos"
+
+#: wp-events-widget.php:60 wp-events.php:59 wp-events.php:60 wp-events.php:61
+#: wp-events.php:62 wp-events.php:64 wp-events.php:215
+msgid "Events"
+msgstr "Eventos"
+
+#: wp-events-widget.php:63
+msgid "Meandmymac.net RSS Feed"
+msgstr "Canal RSS de Meandmymac.net"
+
+#: wp-events-widget.php:112 wp-events.php:118 wp-events.php:378
+msgid "Title"
+msgstr "Título"
+
+#: wp-events-widget.php:117
+msgid "Event"
+msgstr "Evento"
+
+#: wp-events-widget.php:122
+msgid "When"
+msgstr "Cuándo"
+
+#: wp-events-widget.php:126 wp-events.php:407 wp-events.php:518
+msgid "January"
+msgstr "Enero"
+
+#: wp-events-widget.php:127 wp-events.php:408 wp-events.php:519
+msgid "February"
+msgstr "Febrero"
+
+#: wp-events-widget.php:128 wp-events.php:409 wp-events.php:520
+msgid "March"
+msgstr "Marzo"
+
+#: wp-events-widget.php:129 wp-events.php:410 wp-events.php:521
+msgid "April"
+msgstr "Abril"
+
+#: wp-events-widget.php:130 wp-events.php:411 wp-events.php:522
+msgid "May"
+msgstr "Mayo"
+
+#: wp-events-widget.php:131 wp-events.php:412 wp-events.php:523
+msgid "June"
+msgstr "Junio"
+
+#: wp-events-widget.php:132 wp-events.php:413 wp-events.php:524
+msgid "July"
+msgstr "Julio"
+
+#: wp-events-widget.php:133 wp-events.php:414 wp-events.php:525
+msgid "August"
+msgstr "Agosto"
+
+#: wp-events-widget.php:134 wp-events.php:415 wp-events.php:526
+msgid "September"
+msgstr "Septiembre"
+
+#: wp-events-widget.php:135 wp-events.php:416 wp-events.php:527
+msgid "October"
+msgstr "Octubre"
+
+#: wp-events-widget.php:136 wp-events.php:417 wp-events.php:528
+msgid "November"
+msgstr "Noviembre"
+
+#: wp-events-widget.php:137 wp-events.php:418 wp-events.php:529
+msgid "December"
+msgstr "Diciembre"
+
+#: wp-events-widget.php:142 wp-events.php:119 wp-events.php:667
+msgid "Category"
+msgstr "Categoría"
+
+#: wp-events-widget.php:151
+msgid "Sidebar"
+msgstr "B.L."
+
+#: wp-events-widget.php:155 wp-events-widget.php:159
+msgid "Yes, show in the sidebar"
+msgstr "Sí, mostrar en la barra lateral"
+
+#: wp-events-widget.php:156 wp-events-widget.php:158
+msgid "No, on the event page only"
+msgstr "No, en la página de eventos solamente"
+
+#: wp-events-widget.php:168 wp-events-widget.php:172
+msgid "No, delete one day after the event ends"
+msgstr "No, eliminar un día después de que termine el evento"
+
+#: wp-events-widget.php:169 wp-events-widget.php:171
+msgid "Yes, save event for the archive"
+msgstr "Sí, guardar el evento para el archivo"
+
+#: wp-events-widget.php:178 wp-events.php:712 wp-events.php:715
+msgid "Save event"
+msgstr "Guardar evento"
+
+#: wp-events-widget.php:178 wp-events.php:335
+msgid "Add event"
+msgstr "Agregar evento"
+
+#: wp-events-widget.php:178 wp-events.php:823 wp-events.php:825
+#: wp-events.php:883 wp-events.php:885
+msgid "advanced"
+msgstr "avanzado"
+
+#: wp-events-widget.php:178 wp-events.php:60 wp-events.php:85 wp-events.php:348
+msgid "Manage Events"
+msgstr "Gestionar Eventos"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "You should create at least one category before adding events!"
+msgstr "¡Debe crear al menos una categoría antes de añadir eventos!"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "Add a category now"
+msgstr "Añadir una categoría ahora"
+
+#: wp-events.php:60
+msgid "Manage"
+msgstr "Gestionar"
+
+#: wp-events.php:61
+msgid "Add/Edit"
+msgstr "Agregar/Editar"
+
+#: wp-events.php:61
+msgid "Add|Edit Event"
+msgstr "Agregar Evento"
+
+#: wp-events.php:62 wp-events.php:180
+msgid "Categories"
+msgstr "Categorías"
+
+#: wp-events.php:62
+msgid "Manage Categories"
+msgstr "Gestionar Categorías"
+
+#: wp-events.php:88
+msgid "Event <strong>deleted</strong>"
+msgstr "Evento <strong>eliminado</strong>"
+
+#: wp-events.php:90
+msgid "Event <strong>updated</strong>"
+msgstr "Evento <strong>actualizado</strong>"
+
+#: wp-events.php:92 wp-events.php:185 wp-events.php:352
+msgid "Action prohibited"
+msgstr "Acción prohibida"
+
+#: wp-events.php:99
+msgid "You are about to delete one or more events!"
+msgstr "¡Está a punto de eliminar uno o más eventos!"
+
+#: wp-events.php:99 wp-events.php:198 wp-events.php:1216
+msgid "[OK] to continue, [Cancel] to stop."
+msgstr "Seleccione [Aceptar] para continuar, [Cancelar] para detenerse."
+
+#: wp-events.php:99
+msgid "Delete events"
+msgstr "Eliminar eventos"
+
+#: wp-events.php:101 wp-events.php:102 wp-events.php:922 wp-events.php:923
+#: wp-events.php:937 wp-events.php:938
+msgid "by date"
+msgstr "por fecha"
+
+#: wp-events.php:101 wp-events.php:104 wp-events.php:201 wp-events.php:923
+#: wp-events.php:925 wp-events.php:938 wp-events.php:940
+msgid "descending"
+msgstr "descendiente"
+
+#: wp-events.php:101 wp-events.php:786 wp-events.php:791 wp-events.php:806
+#: wp-events.php:822 wp-events.php:826 wp-events.php:834 wp-events.php:851
+#: wp-events.php:867 wp-events.php:882 wp-events.php:886 wp-events.php:894
+#: wp-events.php:910 wp-events.php:971 wp-events.php:981 wp-events.php:990
+#: wp-events.php:1000 wp-events.php:1107 wp-events.php:1123 wp-events.php:1127
+#: wp-events.php:1131 wp-events.php:1135 wp-events.php:1139 wp-events.php:1143
+#: wp-events.php:1147 wp-events.php:1151 wp-events.php:1155 wp-events.php:1159
+#: wp-events.php:1163 wp-events.php:1167 wp-events.php:1171 wp-events.php:1175
+#: wp-events.php:1179 wp-events.php:1183 wp-events.php:1187 wp-events.php:1191
+msgid "default"
+msgstr "predeterminado"
+
+#: wp-events.php:102 wp-events.php:103 wp-events.php:200 wp-events.php:922
+#: wp-events.php:924 wp-events.php:937 wp-events.php:939
+msgid "ascending"
+msgstr "ascendiente"
+
+#: wp-events.php:103 wp-events.php:104 wp-events.php:200 wp-events.php:201
+#: wp-events.php:924 wp-events.php:925 wp-events.php:939 wp-events.php:940
+msgid "in the order you made them"
+msgstr "en el orden que se crearon"
+
+#: wp-events.php:105 wp-events.php:106 wp-events.php:928 wp-events.php:929
+#: wp-events.php:943 wp-events.php:944
+msgid "by title"
+msgstr "por título"
+
+#: wp-events.php:107 wp-events.php:108
+msgid "by category"
+msgstr "por categoría"
+
+#: wp-events.php:110 wp-events.php:205
+msgid "Sort"
+msgstr "Ordenar"
+
+#: wp-events.php:117
+msgid "Date"
+msgstr "Fecha"
+
+#: wp-events.php:120
+msgid "Starts when"
+msgstr "Empieza el"
+
+#: wp-events.php:135 wp-events.php:230
+msgid "Edit"
+msgstr "Editar"
+
+#: wp-events.php:141
+msgid "No Events yet!"
+msgstr "¡Aún no hay eventos!"
+
+#: wp-events.php:145
+msgid "There was an error locating the main database table for Events."
+msgstr ""
+"Ocurrió un error al intentar localizar la tabla principal de Eventos en la "
+"base de datos."
+
+#: wp-events.php:145 wp-events.php:237
+msgid "Please deactivate and re-activate Events from the plugin page!!"
+msgstr ""
+"¡Por favor desactive y reactive el plugin de Eventos de la página de plugins!"
+
+#: wp-events.php:145 wp-events.php:237
+#, php-format
+msgid ""
+"If this does not solve the issue please seek support at <a href=\"%s\">%s</"
+"a>."
+msgstr ""
+"Si esto no resuelve el problema, por favor visite <a href=\"%s\">%s</a> para "
+"encontrar información de ayuda y soporte."
+
+#: wp-events.php:183
+msgid "Category <strong>deleted</strong>"
+msgstr "Categoría <strong>eliminada</strong>"
+
+#: wp-events.php:187
+msgid "Category <strong>created</strong>"
+msgstr "Categoría <strong>creada</strong>"
+
+#: wp-events.php:187
+msgid "Add events now"
+msgstr "Agregar eventos ahora"
+
+#: wp-events.php:189
+msgid "Category <strong>updated</strong>"
+msgstr "Categoría <strong>actualizada</strong>"
+
+#: wp-events.php:191
+msgid "No category name filled in"
+msgstr "No ingresó el nombre de la categoría"
+
+#: wp-events.php:198
+msgid ""
+"You are about to delete one or more categories! Make sure there are no "
+"events in those categories or they will not show on the website"
+msgstr ""
+"¡Está a punto de eliminar una o más categorías! Asegúrese de que no haya "
+"eventos en esas categorías o no serán mostrados en su sitio"
+
+#: wp-events.php:198
+msgid "Delete category"
+msgstr "Eliminar categoría"
+
+#: wp-events.php:202 wp-events.php:203
+msgid "by name"
+msgstr "por nombre"
+
+#: wp-events.php:213 wp-events.php:274
+msgid "ID"
+msgstr "ID"
+
+#: wp-events.php:214 wp-events.php:278
+msgid "Name"
+msgstr "Nombre"
+
+#: wp-events.php:237
+msgid ""
+"There was an error locating the database table for the Events categories."
+msgstr ""
+"Ocurrió un error al intentar localizar la tabla de Categorías de Eventos en "
+"la base de datos."
+
+#: wp-events.php:241
+msgid "Add"
+msgstr "Agregar"
+
+#: wp-events.php:257
+msgid "Please fill in a name for your category!"
+msgstr "Por favor, ¡ingrese un nombre para su categoría!"
+
+#: wp-events.php:268
+msgid "You can change the name of the category here. The ID stays the same!"
+msgstr "Puede cambiar el nombre de la categoría aquí. ¡El ID no cambia!"
+
+#: wp-events.php:286
+msgid "Save Category"
+msgstr "Guardar Categoría"
+
+#: wp-events.php:287 wp-events.php:717
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: wp-events.php:295
+msgid "Error!"
+msgstr "¡Error!"
+
+#: wp-events.php:301
+msgid "No valid group ID specified!"
+msgstr "¡No se especificó un ID de grupo válido!"
+
+#: wp-events.php:301
+msgid "Continue"
+msgstr "Continuar"
+
+#: wp-events.php:340
+msgid "Edit event"
+msgstr "Editar evento"
+
+#: wp-events.php:348
+msgid "Event <strong>created</strong>"
+msgstr "Evento <strong>creado</strong>"
+
+#: wp-events.php:350
+msgid "Event <strong>duplicated</strong>"
+msgstr "Evento <strong>duplicado</strong>"
+
+#: wp-events.php:354
+msgid "Not all fields met the requirements"
+msgstr "No todos los campos llenan los requerimientos"
+
+#: wp-events.php:372
+msgid "Enter your event details below."
+msgstr "Ingrese los detalles de su evento abajo."
+
+#: wp-events.php:379 wp-events.php:699
+#, php-format
+msgid "Maximum %s characters."
+msgstr "Máximo %s caracteres."
+
+#: wp-events.php:380
+msgid "Make title a link."
+msgstr "Convertir el título en un enlace."
+
+#: wp-events.php:380
+msgid "Use the field below."
+msgstr "Use el campo que aparece abajo."
+
+#: wp-events.php:380
+msgid "All-day event."
+msgstr "Todo el día."
+
+#: wp-events.php:397
+msgid ""
+"Please note that the time field uses a 24 hour clock. This means that 22:00 "
+"hour is actually 10:00pm."
+msgstr ""
+"Tome en cuenta que el campo de tiempo usa un reloj de 24 horas. Esto "
+"significa que las 22:00hrs equivalen a las 10:00pm"
+
+#: wp-events.php:397
+msgid ""
+"Hint: If you're used to the AM/PM system and the event takes place/starts "
+"after lunch just add 12 hours."
+msgstr ""
+"Tip: Si está acostumbrado al sistema AM/PM y los eventos inician después del "
+"medio día, sólo sume 12 horas."
+
+#: wp-events.php:403
+msgid "Startdate"
+msgstr "Inicia"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+#: wp-events.php:1134
+msgid "Day"
+msgstr "Día"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Month"
+msgstr "Mes"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Year"
+msgstr "Año"
+
+#: wp-events.php:422 wp-events.php:532
+msgid "Hour"
+msgstr "Hora"
+
+#: wp-events.php:422 wp-events.php:532 wp-events.php:1130
+msgid "Minutes"
+msgstr "Minutos"
+
+#: wp-events.php:422 wp-events.php:513 wp-events.php:532 wp-events.php:626
+#: wp-events.php:634 wp-events.php:665 wp-events.php:697 wp-events.php:702
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "optional"
+msgstr "opcional"
+
+#: wp-events.php:513
+msgid "Enddate"
+msgstr "Finaliza"
+
+#: wp-events.php:626
+msgid "Repeat"
+msgstr "Repetir"
+
+#: wp-events.php:628
+msgid "Don't repeat"
+msgstr "No repetir"
+
+#: wp-events.php:629
+msgid "Every day"
+msgstr "Todos los días"
+
+#: wp-events.php:630
+msgid "Every week"
+msgstr "Cada semana"
+
+#: wp-events.php:631
+msgid "Every 4 Weeks"
+msgstr "Cada 4 semanas"
+
+#: wp-events.php:632
+msgid "Every year"
+msgstr "Cada año"
+
+#: wp-events.php:634
+msgid "This many times"
+msgstr "# de veces"
+
+#: wp-events.php:665
+msgid "Location"
+msgstr "Lugar"
+
+#: wp-events.php:666
+msgid "Maximum 255 characters."
+msgstr ""
+
+#: wp-events.php:675
+msgid "Show in the sidebar"
+msgstr "Mostrar en la barra lateral"
+
+#: wp-events.php:678 wp-events.php:682 wp-events.php:688 wp-events.php:692
+msgid "Yes"
+msgstr "Sí"
+
+#: wp-events.php:679 wp-events.php:681 wp-events.php:689 wp-events.php:691
+msgid "No"
+msgstr "No"
+
+#: wp-events.php:685
+msgid "Archive this event"
+msgstr "Archivar este evento"
+
+#: wp-events.php:697
+msgid "Message when event ends"
+msgstr "Mensaje al terminar el evento"
+
+#: wp-events.php:699
+msgid "HTML allowed"
+msgstr "Puede usar HTML."
+
+#: wp-events.php:702
+msgid "Link to page"
+msgstr "Enlace a la página"
+
+#: wp-events.php:704
+msgid "Include full url and http://, this can be any page."
+msgstr "Incluir url completo y http://, esto puede ser cualquier página."
+
+#: wp-events.php:704
+msgid "Required if checkbox above is checked!"
+msgstr "¡Requerido si la casilla de arriba está marcada!"
+
+#: wp-events.php:713
+msgid "Save as Duplicate"
+msgstr ""
+
+#: wp-events.php:725
+msgid ""
+"Tip: If you do not want to use categories create one \"uncategorized\" and "
+"put all events in there. You don't have to show the categories on your blog."
+msgstr ""
+"Sugerencia: Si no desea utilizar categorías cree una llamada \"Sin categoría"
+"\" y coloque allí todos los eventos. No es necesario mostrar las categorías "
+"en su sitio."
+
+#: wp-events.php:732
+msgid "This is not an event created by you. Therefor you cannot edit it."
+msgstr ""
+
+#: wp-events.php:760
+msgid "Events options"
+msgstr "Opciones de Eventos"
+
+#: wp-events.php:765
+msgid "General"
+msgstr "General"
+
+#: wp-events.php:766 wp-events.php:1014
+msgid "Templates"
+msgstr "Plantillas"
+
+#: wp-events.php:767 wp-events.php:1117
+msgid "Language"
+msgstr "Textos"
+
+#: wp-events.php:768
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+#: wp-events.php:774
+msgid "Main config"
+msgstr "Configuración Principal"
+
+#: wp-events.php:780
+msgid "Options for the sidebar and widget"
+msgstr "Opciones de la barra lateral y widgets"
+
+#: wp-events.php:785
+msgid "Show this many events"
+msgstr "Mostrar esta cantidad de eventos"
+
+#: wp-events.php:789
+msgid "Show"
+msgstr "Mostrar"
+
+#: wp-events.php:791
+msgid "Future events including events that happen today"
+msgstr "Próximos eventos incluyendo el día de hoy"
+
+#: wp-events.php:792
+msgid "Events that didn't start yet"
+msgstr "Eventos que aún no han iniciado"
+
+#: wp-events.php:793
+msgid "Events that didn't end yet"
+msgstr "Eventos que aún no han finalizado"
+
+#: wp-events.php:794
+msgid "The archive"
+msgstr "El archivo"
+
+#: wp-events.php:795
+msgid "Just today's events"
+msgstr "Sólo los eventos de hoy"
+
+#: wp-events.php:796
+msgid "The next 7 days"
+msgstr "Los próximos 7 días"
+
+#: wp-events.php:797
+msgid "Upcoming and/or Archived events"
+msgstr ""
+
+#: wp-events.php:801 wp-events.php:861
+msgid "Date format"
+msgstr "Formato de fecha"
+
+#: wp-events.php:812 wp-events.php:872
+msgid "Weekday"
+msgstr "Día de la semana"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Careful what you put here!"
+msgstr "¡Cuidado con lo escriba aquí!"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Make your own date formats"
+msgstr ""
+
+#: wp-events.php:817 wp-events.php:877
+msgid "manual"
+msgstr ""
+
+#: wp-events.php:819 wp-events.php:879
+msgid "Date system"
+msgstr "Sistema de Fecha"
+
+#: wp-events.php:828 wp-events.php:888
+msgid "Save options to see the result!"
+msgstr "¡Guarde las opciones para ver el resultado!"
+
+#: wp-events.php:831 wp-events.php:891
+msgid "Time format"
+msgstr "Formato de hora"
+
+#: wp-events.php:833 wp-events.php:893
+msgid "24-hour clock"
+msgstr "reloj de 24 horas"
+
+#: wp-events.php:836 wp-events.php:896
+msgid "12-hour clock"
+msgstr "Reloj de 12 horas"
+
+#: wp-events.php:842 wp-events.php:902
+msgid "Date parsing"
+msgstr "Análisis de Fecha"
+
+#: wp-events.php:844
+msgid "Never show the ending date/time (Default)"
+msgstr ""
+
+#: wp-events.php:845 wp-events.php:904
+msgid "Hide the ending date if it's the same as the starting date"
+msgstr "Ocultar la fecha de finalización si es la misma que la fecha de inicio"
+
+#: wp-events.php:846 wp-events.php:905
+msgid "Show the ending date even if it's the same as the starting date"
+msgstr ""
+"Mostrar la fecha de finalización, aunque sea la misma que la fecha de inicio"
+
+#: wp-events.php:850 wp-events.php:909
+msgid "Character limit"
+msgstr "Límite de caracteres"
+
+#: wp-events.php:856
+msgid "Options for the page lists"
+msgstr "Opciones para los listados de eventos"
+
+#: wp-events.php:915
+msgid "Global or other options"
+msgstr "Otras opciones"
+
+#: wp-events.php:920
+msgid "Order events"
+msgstr "Ordenar eventos"
+
+#: wp-events.php:926 wp-events.php:927 wp-events.php:941 wp-events.php:942
+msgid "by author"
+msgstr "por autor"
+
+#: wp-events.php:930 wp-events.php:931 wp-events.php:945 wp-events.php:946
+msgid "by description"
+msgstr "por descripción"
+
+#: wp-events.php:935
+msgid "Order archive"
+msgstr "Ordenar archivo"
+
+#: wp-events.php:950
+msgid "Links open in"
+msgstr "El enlace se abre en"
+
+#: wp-events.php:952
+msgid "new window"
+msgstr "una nueva ventana"
+
+#: wp-events.php:953
+msgid "same window"
+msgstr "la misma ventana"
+
+#: wp-events.php:954
+msgid "parent window"
+msgstr "la ventana superior (parent)"
+
+#: wp-events.php:960
+msgid "User Access"
+msgstr "Acceso de usuario"
+
+#: wp-events.php:965
+msgid ""
+"Set these options to prevent certain userlevels from editing, creating or "
+"deleting events. The options panel user level cannot be changed."
+msgstr ""
+"Configure estas opciones para evitar que determinados niveles de usuario "
+"puedan editar, crear o borrar eventos. El nivel de usuario del panel de "
+"opciones no se puede cambiar."
+
+#: wp-events.php:965
+#, php-format
+msgid "For more information on user roles go to <a href=\"%s\">the codex</a>."
+msgstr ""
+"Para obtener más información sobre funciones de usuario vea el  <a href=\"%s"
+"\">codex</a>."
+
+#: wp-events.php:968
+msgid "Add Events"
+msgstr ""
+
+#: wp-events.php:970 wp-events.php:980 wp-events.php:990 wp-events.php:1000
+msgid "Administrator"
+msgstr "Administrador"
+
+#: wp-events.php:971 wp-events.php:981 wp-events.php:991 wp-events.php:1001
+msgid "Editor"
+msgstr "Editor"
+
+#: wp-events.php:972 wp-events.php:982 wp-events.php:992 wp-events.php:1002
+msgid "Author"
+msgstr "Autor"
+
+#: wp-events.php:973 wp-events.php:983 wp-events.php:993 wp-events.php:1003
+msgid "Contributor"
+msgstr "Colaborador"
+
+#: wp-events.php:974 wp-events.php:984 wp-events.php:994 wp-events.php:1004
+msgid "Subscriber"
+msgstr "Suscriptor"
+
+#: wp-events.php:975
+msgid "Can add events and edit events they created."
+msgstr ""
+
+#: wp-events.php:978
+msgid "Edit events"
+msgstr ""
+
+#: wp-events.php:985
+msgid "Can add/edit/review anyone's events."
+msgstr ""
+
+#: wp-events.php:988
+msgid "Manage events"
+msgstr ""
+
+#: wp-events.php:995
+msgid "Can add/edit/review/delete anyone's events."
+msgstr ""
+
+#: wp-events.php:998
+msgid "Manage categories"
+msgstr ""
+
+#: wp-events.php:1005
+msgid "Can add/remove categories."
+msgstr "Puede agregar y remover categorías."
+
+#: wp-events.php:1009
+msgid "Update Options"
+msgstr "Actualizar Opciones"
+
+#: wp-events.php:1021
+msgid "Sidebar and widget"
+msgstr "Barra lateral y widgets"
+
+#: wp-events.php:1026 wp-events.php:1044 wp-events.php:1067 wp-events.php:1090
+msgid "Header"
+msgstr "Encabezado"
+
+#: wp-events.php:1029 wp-events.php:1052 wp-events.php:1075 wp-events.php:1098
+msgid "Body"
+msgstr "Cuerpo"
+
+#: wp-events.php:1030 wp-events.php:1045 wp-events.php:1053 wp-events.php:1068
+#: wp-events.php:1076 wp-events.php:1091 wp-events.php:1099
+msgid "Options"
+msgstr "Opciones"
+
+#: wp-events.php:1033 wp-events.php:1056 wp-events.php:1079 wp-events.php:1102
+msgid "Footer"
+msgstr "Pie"
+
+#: wp-events.php:1039 wp-events.php:1062 wp-events.php:1085
+msgid "Page"
+msgstr "Página"
+
+#: wp-events.php:1039
+msgid "main list"
+msgstr "lista principal"
+
+#: wp-events.php:1039
+msgid "Week"
+msgstr "Semana"
+
+#: wp-events.php:1039
+msgid "7 days ahead"
+msgstr "7 días antes"
+
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "Default title"
+msgstr "Título predeterminado"
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "This only works if you use %category% in the header."
+msgstr ""
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "No HTML allowed."
+msgstr "No se permite el uso de HTML."
+
+#: wp-events.php:1062
+msgid "archive list"
+msgstr "lista de archivo"
+
+#: wp-events.php:1085
+msgid "today's list"
+msgstr "lista de hoy"
+
+#: wp-events.php:1106
+msgid "Location separator"
+msgstr "Separador de Lugar"
+
+#: wp-events.php:1107
+msgid "Can be text also."
+msgstr "También puede ser texto."
+
+#: wp-events.php:1107
+msgid "Ending spaces allowed."
+msgstr "Se permiten espacios al final."
+
+#: wp-events.php:1112
+msgid "Update Templates"
+msgstr "Actualizar Plantillas"
+
+#: wp-events.php:1122
+msgid "Today"
+msgstr "Hoy"
+
+#: wp-events.php:1126
+msgid "Hours"
+msgstr "Horas"
+
+#: wp-events.php:1138
+msgid "Days"
+msgstr "Días"
+
+#: wp-events.php:1142
+msgid "And"
+msgstr "Y"
+
+#: wp-events.php:1146
+msgid "On"
+msgstr "El"
+
+#: wp-events.php:1150
+msgid "In"
+msgstr "En"
+
+#: wp-events.php:1154
+msgid "Ago"
+msgstr "Atrás"
+
+#: wp-events.php:1158
+msgid "Sidebar link"
+msgstr "Enlace de la barra lateral"
+
+#: wp-events.php:1162
+msgid "Page link"
+msgstr "Enlace de la página"
+
+#: wp-events.php:1166
+msgid "If there are no events to show"
+msgstr "Si no hay eventos para mostrar"
+
+#: wp-events.php:1170
+msgid "If the event already happened"
+msgstr "Si el evento ya pasó"
+
+#: wp-events.php:1174
+msgid "If there are no events today"
+msgstr "Si no hay eventos hoy"
+
+#: wp-events.php:1178
+msgid "If the archive is empty"
+msgstr "Si el archivo está vacío"
+
+#: wp-events.php:1182
+msgid "If there is an error"
+msgstr "Si hay un error"
+
+#: wp-events.php:1186
+msgid "If no duration is set for an event"
+msgstr "Si no se define la duración de un evento"
+
+#: wp-events.php:1190
+msgid "If event is an all-day event"
+msgstr "Si es un evento de todo el día"
+
+#: wp-events.php:1196
+msgid "Update Language"
+msgstr "Actualizar Textos"
+
+#: wp-events.php:1203
+msgid "Uninstaller"
+msgstr "Desinstalador"
+
+#: wp-events.php:1208
+msgid ""
+"Events installs a table in MySQL. When you disable the plugin the table will "
+"not be deleted. To delete the table use the button below."
+msgstr ""
+"El plugin de Eventos instala una tabla en MySQL. Al deshabilitar el plugin "
+"la tabla no se eliminará. Para eliminar la tabla de utilizar el botón de "
+"abajo."
+
+#: wp-events.php:1211
+msgid ""
+"This process is irreversible and will delete ALL scheduled events and "
+"associated options!"
+msgstr ""
+"¡Este proceso es irreversible y se eliminarán todos los eventos programados "
+"y las opciones asociadas!"
+
+#: wp-events.php:1216
+msgid "You are about to uninstall the events plugin"
+msgstr "Estás a punto de desinstalar el plugin de eventos"
+
+#: wp-events.php:1216
+msgid "All scheduled events will be lost!"
+msgstr "¡Todos los eventos programados se perderán!"
+
+#: wp-events.php:1216
+msgid "Uninstall Events"
+msgstr "Desinstalar Eventos"
+
+#~ msgid "Events for Excellent!"
+#~ msgstr "Créditos"
+
+#~ msgid "Like my software? <a href=\"%s\">Show your appreciation</a>. Thanks!"
+#~ msgstr ""
+#~ "¿Le agrada mi software? <a href=\"%s\">Muestre su aprecio</a>. ¡Gracias!"
+
+#~ msgid "Preferred by locale"
+#~ msgstr "Preferido por Localidad"
+
+#~ msgid "Learn"
+#~ msgstr "Aprenda"
+
+#~ msgid "php manual"
+#~ msgstr "Manual de PHP"
+
+#~ msgid "Untitled"
+#~ msgstr "Sin Título"
+
+#~ msgid "Duplicate event"
+#~ msgstr "Duplicar evento"
+
+#~ msgid "Delete Events"
+#~ msgstr "Eliminar Eventos"
+
+#~ msgid "Can add/edit/review events."
+#~ msgstr "Puede agregar/editar/revisar eventos."
+
+#~ msgid "Can review/delete events."
+#~ msgstr "Puede revisar/eliminar eventos."
+
+#~ msgid "This only works if you use %s in the header."
+#~ msgstr "Esto sólo funciona si se usa %s en el encabezado."
+
+#~ msgid "Global template values"
+#~ msgstr "Valores globales de plantilla"
+
+#~ msgid ""
+#~ "Localization can usually be en_US. Changing this value should translate "
+#~ "the dates to your language."
+#~ msgstr ""
+#~ "La localización puede ser es_ES. Cambiar este valor debería traducir las "
+#~ "fechas a su idioma."
+
+#~ msgid ""
+#~ "On Linux/Mac Osx (Darwin) you should use 'en_US' in the field. For "
+#~ "windows just 'en' should suffice."
+#~ msgstr ""
+#~ "En Linux/Mac OS X (Darwin) debe usar 'es_ES' en este campo. Para Windows, "
+#~ "'es' debería ser suficiente."
+
+#~ msgid "Your server most likely uses %s."
+#~ msgstr "Lo más probable es que su servidor utiliza %s."
+
+#~ msgid "Date localization"
+#~ msgstr "Localización de Fecha"
+
+#~ msgid ""
+#~ "The MySQL table was not properly upgrade! Events cannot work properly "
+#~ "without this upgrade. Check your MySQL permissions and see if you have "
+#~ "ALTER rights (rights to alter existing tables)."
+#~ msgstr ""
+#~ "¡La tabla de MySQL no se actualizo correctamente! El plugin de Eventos no "
+#~ "puede funcionar correctamente sin esta actualización. Compruebe los "
+#~ "permisos de MySQL y verifique si usted tiene derechos para modificar las "
+#~ "tablas."
+
+#~ msgid "and mention any errors you saw/got and explain what you were doing!"
+#~ msgstr ""
+#~ "y mencione cualquier error que haya visto/experimentado y explique qué "
+#~ "estaba haciendo!"
+
+#~ msgid "An unexpected error occured"
+#~ msgstr "Ocurrió un error inesperado"
+
+#~ msgid "Find me on <a href=\"%s\">%s</a>."
+#~ msgstr "Encuentreme en <a href=\"%s\">%s</a>."
+
+#~ msgid "Translation: ---"
+#~ msgstr ""
+#~ "Traducción al Español: Karin Sequén | <a href=\"http://www.bumerang180.com"
+#~ "\" target=\"_blank\">Bumerang 180</a>"
+
+#~ msgid ""
+#~ "The plugin page at <a href=\"%s\">%s</a>. Getting started, manuals and "
+#~ "more..."
+#~ msgstr ""
+#~ "Y la página del plugin en <a href=\"%s\">%s</a>. Cómo empezar, manuales y "
+#~ "más..."
+
+#~ msgid "<a href=\"%s\">%s</a> for updates and notes about Events!"
+#~ msgstr ""
+#~ "<a href=\"%s\">%s</a> para actualizaciones y notas acerca del plugin de "
+#~ "Eventos!"
+
+#~ msgid "Need help? <a href=\"%s\">%s</a>. Now with a search function!"
+#~ msgstr ""
+#~ "Necesita ayuda? <a href=\"%s\">%s</a>. ¡Ahora con función de búsqueda!"
+
+#~ msgid ""
+#~ "Do you require more help than the forum can offer? <a href=\"%s\">Premium "
+#~ "Support</a> is available!"
+#~ msgstr ""
+#~ "¿Necesita más ayuda de la que podemos ofrecerle en el foro? ¡Contamos con "
+#~ "el servicio de <a href=\"%s\">Soporte Premium</a>!"
+
+#~ msgid "An error has occurred; the feed is probably down. Try again later."
+#~ msgstr ""
+#~ "Se ha producido un error, es posible que el servidor esté abajo. "
+#~ "Inténtelo de nuevo más tarde."

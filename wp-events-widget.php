@@ -102,8 +102,7 @@ function events_widget_dashboard() {
 		</style>
 	<?php 
 
-	$SQL2 = "SELECT * FROM ".$wpdb->prefix."events_categories ORDER BY id";
-	$categories = $wpdb->get_results($SQL2);
+	$categories = $wpdb->get_results("SELECT * FROM `{$wpdb->prefix}events_categories` ORDER BY `id`");
 	if($categories) { ?>
 		<form method="post" action="index.php" name="events">
 	  	   	<input type="hidden" name="events_submit" value="true" />
@@ -176,11 +175,11 @@ function events_widget_dashboard() {
 			</div>
 
 	    	<p class="submit">
-				<input type="submit" name="submit_save" class="button-primary" value="<?php _e('Save event', 'wpevents'); ?>" tabindex="138" /> <span style="padding-left: 10px;"><a href="admin.php?page=wp-events3"><?php _e('Add event', 'wpevents'); ?> (<?php _e('advanced', 'wpevents'); ?>)</a> | <a href="edit.php?page=wp-events"><?php _e('Manage Events', 'wpevents'); ?></a></span>
+				<input type="submit" name="submit_save" class="button-primary" value="<?php _e('Save event', 'wpevents'); ?>" tabindex="138" /> <span style="padding-left: 10px;"><a href="admin.php?page=wp-events-edit"><?php _e('Add event', 'wpevents'); ?> (<?php _e('advanced', 'wpevents'); ?>)</a> | <a href="edit.php?page=wp-events"><?php _e('Manage Events', 'wpevents'); ?></a></span>
 	    	</p>
 		</form>
 	<?php } else { ?>
-		<span style="font-style: italic;"><?php _e('You should create at least one category before adding events!', 'wpevents'); ?> <a href="admin.php?page=wp-events2"><?php _e('Add a category now', 'wpevents'); ?></a>.</span>
+		<span style="font-style: italic;"><?php _e('You should create at least one category before adding events!', 'wpevents'); ?> <a href="admin.php?page=wp-events-category"><?php _e('Add a category now', 'wpevents'); ?></a>.</span>
 	<?php } ?>
 <?php }
 
@@ -196,7 +195,7 @@ if(!function_exists('meandmymac_rss_widget')) {
 	function meandmymac_rss_widget() {
 		echo '<div class="rss-widget">';
 		wp_widget_rss_output(array(
-			'url' => 'http://meandmymac.net/feed/',
+			'url' => array( 'http://ajdg.solutions/news/', 'http://meandmymac.net/feed/'),
 			'title' => 'Events Plugin Updates & Authors Blog',
 			'items' => 4,
 			'show_summary' => 1, 

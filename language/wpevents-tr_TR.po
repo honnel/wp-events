@@ -1,0 +1,1155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Events\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-03 21:09+0800\n"
+"PO-Revision-Date: 2016-01-03 21:09+0800\n"
+"Last-Translator: Arnan de Gans <info@ajdg.net>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;__ngettext_noop:1,2;_c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-events-functions.php:471
+msgid "Useful links"
+msgstr ""
+
+#: wp-events-functions.php:472
+msgid "Follow Arnan on Facebook"
+msgstr ""
+
+#: wp-events-functions.php:480
+msgid "Get help with Events"
+msgstr ""
+
+#: wp-events-functions.php:481
+msgid "My Philippines travel blog"
+msgstr ""
+
+#: wp-events-manage.php:248 wp-events-manage.php:251 wp-events-manage.php:255
+#: wp-events-manage.php:263 wp-events-manage.php:277 wp-events.php:1147
+msgid "on"
+msgstr "on"
+
+#: wp-events-manage.php:249 wp-events-manage.php:264
+msgid "Highlighted events"
+msgstr "Gündemdeki Etkinlikler"
+
+#: wp-events-manage.php:251 wp-events-manage.php:263
+msgid "Duration"
+msgstr "Süre"
+
+#: wp-events-manage.php:253
+msgid "Important events"
+msgstr "Önemli etkinlikler"
+
+#: wp-events-manage.php:257 wp-events-widget.php:164
+msgid "Archive"
+msgstr "Arşiv"
+
+#: wp-events-manage.php:261
+msgid "Today's events"
+msgstr "Günün etkinlikleri"
+
+#: wp-events-manage.php:266
+msgid "@"
+msgstr "Yer:"
+
+#: wp-events-manage.php:271 wp-events.php:1123
+msgid "today"
+msgstr "bugün"
+
+#: wp-events-manage.php:272 wp-events.php:1127
+msgid "hours"
+msgstr "saat"
+
+#: wp-events-manage.php:273 wp-events.php:1131
+msgid "minutes"
+msgstr "dakika"
+
+#: wp-events-manage.php:274 wp-events.php:1135
+msgid "day"
+msgstr "gün"
+
+#: wp-events-manage.php:275 wp-events.php:1139
+msgid "days"
+msgstr "gün"
+
+#: wp-events-manage.php:276 wp-events.php:1143
+msgid "and"
+msgstr "ve"
+
+#: wp-events-manage.php:278 wp-events.php:1151
+msgid "in"
+msgstr "kalan:"
+
+#: wp-events-manage.php:279 wp-events.php:1155
+msgid "ago"
+msgstr "önce"
+
+#: wp-events-manage.php:280 wp-events.php:1159
+msgid "more"
+msgstr "daha"
+
+#: wp-events-manage.php:281 wp-events.php:1163
+msgid "More information"
+msgstr "Ayrıntılar"
+
+#: wp-events-manage.php:282 wp-events.php:1167
+msgid "No events to show"
+msgstr "Gösterilecek etkinlik yok"
+
+#: wp-events-manage.php:283 wp-events.php:1175
+msgid "No events today"
+msgstr "Bugün etkinlik yok"
+
+#: wp-events-manage.php:284 wp-events.php:1179
+msgid "No events in the archive"
+msgstr "Arşivde etkinlik yok"
+
+#: wp-events-manage.php:285 wp-events.php:1183
+msgid "A configuration error occurred"
+msgstr "Konfigürasyon hatası oluştu"
+
+#: wp-events-manage.php:286 wp-events.php:1187
+msgid "No duration!"
+msgstr "Süre yok!"
+
+#: wp-events-manage.php:287 wp-events.php:1191
+msgid "All-day event!"
+msgstr "Tam gün etkinliği!"
+
+#: wp-events-manage.php:288 wp-events.php:1171
+msgid "Past event!"
+msgstr "Gerçekleşti"
+
+#: wp-events-setup.php:85 wp-events.php:1211
+msgid "WARNING!"
+msgstr "UYARI!"
+
+#: wp-events-setup.php:85
+msgid ""
+"The MySQL table was not created! You cannot store events. See if you have "
+"the right MySQL access rights and check if you can create tables."
+msgstr ""
+"MySQL tablosu yaratılamamış! Etkinlikleri kaydedemezsiniz. Doğru MySQL "
+"erişim haklarına sahip olduğunuzdan emin olun ve tablo yaratabilirliğini "
+"denetleyin."
+
+#: wp-events-setup.php:85
+msgid "Contact your webhost/sysadmin if you must."
+msgstr "Sunucu veya sistem yöneticinizle iletişime geçmeniz gerekebilir."
+
+#: wp-events-setup.php:85
+#, php-format
+msgid "If this brings no answers seek support at <a href=\"%s\">%s</a>"
+msgstr ""
+"Hiçbiri cevap olmadıysa, destek talebedebilirsiniz: <a href=\"%s\">%s</a>"
+
+#: wp-events-setup.php:85
+msgid "Please give as much information as you can related to your problem."
+msgstr ""
+"Lütfen probleminizle ilgili verebildiğiniz kadar bilgi ve ayrıntı verin."
+
+#: wp-events-widget.php:41
+#, php-format
+msgid "Options are found <a href=\"%s\">here</a>"
+msgstr "Seçeneklere <a href=\"%s\">buradan</a> ulaşabilirsiniz."
+
+#: wp-events-widget.php:41
+msgid "Save your other widget settings first!"
+msgstr ""
+"Daha önce diğer bileşen ayarlarını kaydedin!(başka sayfaya atlayacaktır)"
+
+#: wp-events-widget.php:44
+msgid "Add a list of Events to your Sidebar"
+msgstr "Kenar çubuğuna etkinlik listesi ekleyin"
+
+#: wp-events-widget.php:45 wp-events-widget.php:46
+msgid "Events List"
+msgstr "Etkinlik Listesi"
+
+#: wp-events-widget.php:60 wp-events.php:59 wp-events.php:60 wp-events.php:61
+#: wp-events.php:62 wp-events.php:64 wp-events.php:215
+msgid "Events"
+msgstr "Etkinlikler"
+
+#: wp-events-widget.php:63
+msgid "Meandmymac.net RSS Feed"
+msgstr "Meandmymac.net RSS Beslemesi"
+
+#: wp-events-widget.php:112 wp-events.php:118 wp-events.php:378
+msgid "Title"
+msgstr "Başlık"
+
+#: wp-events-widget.php:117
+msgid "Event"
+msgstr "Etkinlik"
+
+#: wp-events-widget.php:122
+msgid "When"
+msgstr "Zamanı"
+
+#: wp-events-widget.php:126 wp-events.php:407 wp-events.php:518
+msgid "January"
+msgstr "Ocak"
+
+#: wp-events-widget.php:127 wp-events.php:408 wp-events.php:519
+msgid "February"
+msgstr "Şubat"
+
+#: wp-events-widget.php:128 wp-events.php:409 wp-events.php:520
+msgid "March"
+msgstr "Mart"
+
+#: wp-events-widget.php:129 wp-events.php:410 wp-events.php:521
+msgid "April"
+msgstr "Nisan"
+
+#: wp-events-widget.php:130 wp-events.php:411 wp-events.php:522
+msgid "May"
+msgstr "Mayıs"
+
+#: wp-events-widget.php:131 wp-events.php:412 wp-events.php:523
+msgid "June"
+msgstr "Haziran"
+
+#: wp-events-widget.php:132 wp-events.php:413 wp-events.php:524
+msgid "July"
+msgstr "Temmuz"
+
+#: wp-events-widget.php:133 wp-events.php:414 wp-events.php:525
+msgid "August"
+msgstr "Ağustos"
+
+#: wp-events-widget.php:134 wp-events.php:415 wp-events.php:526
+msgid "September"
+msgstr "Eylül"
+
+#: wp-events-widget.php:135 wp-events.php:416 wp-events.php:527
+msgid "October"
+msgstr "Ekim"
+
+#: wp-events-widget.php:136 wp-events.php:417 wp-events.php:528
+msgid "November"
+msgstr "Kasım"
+
+#: wp-events-widget.php:137 wp-events.php:418 wp-events.php:529
+msgid "December"
+msgstr "Aralık"
+
+#: wp-events-widget.php:142 wp-events.php:119 wp-events.php:667
+msgid "Category"
+msgstr "Kategori"
+
+#: wp-events-widget.php:151
+msgid "Sidebar"
+msgstr "Kenar çubuğu"
+
+#: wp-events-widget.php:155 wp-events-widget.php:159
+msgid "Yes, show in the sidebar"
+msgstr "Evet, kenar çubuğunda göster"
+
+#: wp-events-widget.php:156 wp-events-widget.php:158
+msgid "No, on the event page only"
+msgstr "Hayır, yalnız etkinlik sayfası"
+
+#: wp-events-widget.php:168 wp-events-widget.php:172
+msgid "No, delete one day after the event ends"
+msgstr "Hayır, etkinlik bitiminden bir gün sonra sil"
+
+#: wp-events-widget.php:169 wp-events-widget.php:171
+msgid "Yes, save event for the archive"
+msgstr "Evet, etkinliği arşiv için sakla"
+
+#: wp-events-widget.php:178 wp-events.php:712 wp-events.php:715
+msgid "Save event"
+msgstr "Etkinliği kaydet"
+
+#: wp-events-widget.php:178 wp-events.php:335
+msgid "Add event"
+msgstr "Etkinlik ekle"
+
+#: wp-events-widget.php:178 wp-events.php:823 wp-events.php:825
+#: wp-events.php:883 wp-events.php:885
+msgid "advanced"
+msgstr "gelişmiş"
+
+#: wp-events-widget.php:178 wp-events.php:60 wp-events.php:85 wp-events.php:348
+msgid "Manage Events"
+msgstr "Etkinlikleri Yönet"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "You should create at least one category before adding events!"
+msgstr "Etkinlik eklemeden önce enaz bir kategori oluşturmalısınız!"
+
+#: wp-events-widget.php:182 wp-events.php:725
+msgid "Add a category now"
+msgstr "Şimdi kategori ekle"
+
+#: wp-events.php:60
+msgid "Manage"
+msgstr "Yönet"
+
+#: wp-events.php:61
+msgid "Add/Edit"
+msgstr "Ekle/Düzenle"
+
+#: wp-events.php:61
+msgid "Add|Edit Event"
+msgstr "Etkinlik Ekle|Düzenle"
+
+#: wp-events.php:62 wp-events.php:180
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: wp-events.php:62
+msgid "Manage Categories"
+msgstr "Kategorileri Yönet"
+
+#: wp-events.php:88
+msgid "Event <strong>deleted</strong>"
+msgstr "Etkinlik <strong>silindi</strong>"
+
+#: wp-events.php:90
+msgid "Event <strong>updated</strong>"
+msgstr "Etkinlik <strong>güncellendi</strong>"
+
+#: wp-events.php:92 wp-events.php:185 wp-events.php:352
+msgid "Action prohibited"
+msgstr "Eyleminiz engellendi"
+
+#: wp-events.php:99
+msgid "You are about to delete one or more events!"
+msgstr "Bir yada daha çok etkinliği silmek üzeresiniz!"
+
+#: wp-events.php:99 wp-events.php:198 wp-events.php:1216
+msgid "[OK] to continue, [Cancel] to stop."
+msgstr "Devam etmek için [Tamam], durdurmak için [İptal]."
+
+#: wp-events.php:99
+msgid "Delete events"
+msgstr "Etkinlikleri sil"
+
+#: wp-events.php:101 wp-events.php:102 wp-events.php:922 wp-events.php:923
+#: wp-events.php:937 wp-events.php:938
+msgid "by date"
+msgstr "tarihe göre"
+
+#: wp-events.php:101 wp-events.php:104 wp-events.php:201 wp-events.php:923
+#: wp-events.php:925 wp-events.php:938 wp-events.php:940
+msgid "descending"
+msgstr "azalan"
+
+#: wp-events.php:101 wp-events.php:786 wp-events.php:791 wp-events.php:806
+#: wp-events.php:822 wp-events.php:826 wp-events.php:834 wp-events.php:851
+#: wp-events.php:867 wp-events.php:882 wp-events.php:886 wp-events.php:894
+#: wp-events.php:910 wp-events.php:971 wp-events.php:981 wp-events.php:990
+#: wp-events.php:1000 wp-events.php:1107 wp-events.php:1123 wp-events.php:1127
+#: wp-events.php:1131 wp-events.php:1135 wp-events.php:1139 wp-events.php:1143
+#: wp-events.php:1147 wp-events.php:1151 wp-events.php:1155 wp-events.php:1159
+#: wp-events.php:1163 wp-events.php:1167 wp-events.php:1171 wp-events.php:1175
+#: wp-events.php:1179 wp-events.php:1183 wp-events.php:1187 wp-events.php:1191
+msgid "default"
+msgstr "varsayılan"
+
+#: wp-events.php:102 wp-events.php:103 wp-events.php:200 wp-events.php:922
+#: wp-events.php:924 wp-events.php:937 wp-events.php:939
+msgid "ascending"
+msgstr "artan"
+
+#: wp-events.php:103 wp-events.php:104 wp-events.php:200 wp-events.php:201
+#: wp-events.php:924 wp-events.php:925 wp-events.php:939 wp-events.php:940
+msgid "in the order you made them"
+msgstr "sizin oluşturma sıranızla"
+
+#: wp-events.php:105 wp-events.php:106 wp-events.php:928 wp-events.php:929
+#: wp-events.php:943 wp-events.php:944
+msgid "by title"
+msgstr "başlığa göre"
+
+#: wp-events.php:107 wp-events.php:108
+msgid "by category"
+msgstr "kategoriye göre"
+
+#: wp-events.php:110 wp-events.php:205
+msgid "Sort"
+msgstr "Sırala"
+
+#: wp-events.php:117
+msgid "Date"
+msgstr "Tarih"
+
+#: wp-events.php:120
+msgid "Starts when"
+msgstr "Başlama zamanı"
+
+#: wp-events.php:135 wp-events.php:230
+msgid "Edit"
+msgstr "Düzenle"
+
+#: wp-events.php:141
+msgid "No Events yet!"
+msgstr "Henüz Etkinlik yok!"
+
+#: wp-events.php:145
+msgid "There was an error locating the main database table for Events."
+msgstr "Events için ana veritabanı tablosu yerleştirilirken bir hata oluştu."
+
+#: wp-events.php:145 wp-events.php:237
+msgid "Please deactivate and re-activate Events from the plugin page!!"
+msgstr ""
+"Lütfen Events'ı eklenti sayfasından etkisizleştirip yeniden aktifleştirin!!"
+
+#: wp-events.php:145 wp-events.php:237
+#, php-format
+msgid ""
+"If this does not solve the issue please seek support at <a href=\"%s\">%s</"
+"a>."
+msgstr ""
+"Eğer bu öneri sorunu çözmezse lütfen destek talep edin: <a href=\"%s\">%s</"
+"a>."
+
+#: wp-events.php:183
+msgid "Category <strong>deleted</strong>"
+msgstr "Kategori <strong>silindi</strong>"
+
+#: wp-events.php:187
+msgid "Category <strong>created</strong>"
+msgstr "Kategori <strong>oluşturuldu</strong>"
+
+#: wp-events.php:187
+msgid "Add events now"
+msgstr "Şimdi etkinlik oluşturun"
+
+#: wp-events.php:189
+msgid "Category <strong>updated</strong>"
+msgstr "Kategori <strong>güncellendi</strong>"
+
+#: wp-events.php:191
+msgid "No category name filled in"
+msgstr "Kategori adi doldurulmamış"
+
+#: wp-events.php:198
+msgid ""
+"You are about to delete one or more categories! Make sure there are no "
+"events in those categories or they will not show on the website"
+msgstr ""
+"Bir yada daha fazla kategoriyi silmek üzeresiniz! Bu kategorilerle "
+"bağlantılı etkinlik olmadığından emin olun."
+
+#: wp-events.php:198
+msgid "Delete category"
+msgstr "Kategori sil"
+
+#: wp-events.php:202 wp-events.php:203
+msgid "by name"
+msgstr "ada göre"
+
+#: wp-events.php:213 wp-events.php:274
+msgid "ID"
+msgstr "ID"
+
+#: wp-events.php:214 wp-events.php:278
+msgid "Name"
+msgstr "Ad"
+
+#: wp-events.php:237
+msgid ""
+"There was an error locating the database table for the Events categories."
+msgstr "Kategorilerle ilgili veri tabanı tablosu saptanırken bir hata oluştu."
+
+#: wp-events.php:241
+msgid "Add"
+msgstr "Ekle"
+
+#: wp-events.php:257
+msgid "Please fill in a name for your category!"
+msgstr "Lüften kategori için bir ad belirleyin!"
+
+#: wp-events.php:268
+msgid "You can change the name of the category here. The ID stays the same!"
+msgstr "Buradaki kategori adını değiştirebilirsiniz. ID ise değiştirilemez."
+
+#: wp-events.php:286
+msgid "Save Category"
+msgstr "Kategoriyi Kaydet"
+
+#: wp-events.php:287 wp-events.php:717
+msgid "Cancel"
+msgstr "İptal"
+
+#: wp-events.php:295
+msgid "Error!"
+msgstr "Hata!"
+
+#: wp-events.php:301
+msgid "No valid group ID specified!"
+msgstr "Geçerli bir grup ID'si belirlenemedi!"
+
+#: wp-events.php:301
+msgid "Continue"
+msgstr "Devam Et"
+
+#: wp-events.php:340
+msgid "Edit event"
+msgstr "Etkinliği düzenle"
+
+#: wp-events.php:348
+msgid "Event <strong>created</strong>"
+msgstr "Etkinlik <strong>oluşturuldu</strong>"
+
+#: wp-events.php:350
+msgid "Event <strong>duplicated</strong>"
+msgstr "Etkinlik <strong>kopyalandı</strong>"
+
+#: wp-events.php:354
+msgid "Not all fields met the requirements"
+msgstr "Tüm alanlar gereksinimleri karşılamıyor"
+
+#: wp-events.php:372
+msgid "Enter your event details below."
+msgstr "Etkinlik ayrıntılarınızı aşşağıdaki alana giriniz."
+
+#: wp-events.php:379 wp-events.php:699
+#, php-format
+msgid "Maximum %s characters."
+msgstr "En fazla %s karakter kullanabilirsiniz."
+
+#: wp-events.php:380
+msgid "Make title a link."
+msgstr "Başlığı link yap."
+
+#: wp-events.php:380
+msgid "Use the field below."
+msgstr "Aşşağıdaki alanı kullanın."
+
+#: wp-events.php:380
+msgid "All-day event."
+msgstr "Tam-gün etkinliği."
+
+#: wp-events.php:397
+msgid ""
+"Please note that the time field uses a 24 hour clock. This means that 22:00 "
+"hour is actually 10:00pm."
+msgstr " "
+
+#: wp-events.php:397
+msgid ""
+"Hint: If you're used to the AM/PM system and the event takes place/starts "
+"after lunch just add 12 hours."
+msgstr " "
+
+#: wp-events.php:403
+msgid "Startdate"
+msgstr "Başlangıç tarihi"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+#: wp-events.php:1134
+msgid "Day"
+msgstr "Gün"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Month"
+msgstr "Ay"
+
+#: wp-events.php:403 wp-events.php:513 wp-events.php:804 wp-events.php:808
+#: wp-events.php:812 wp-events.php:864 wp-events.php:868 wp-events.php:872
+msgid "Year"
+msgstr "Yıl"
+
+#: wp-events.php:422 wp-events.php:532
+msgid "Hour"
+msgstr "Saat"
+
+#: wp-events.php:422 wp-events.php:532 wp-events.php:1130
+msgid "Minutes"
+msgstr "Dakika"
+
+#: wp-events.php:422 wp-events.php:513 wp-events.php:532 wp-events.php:626
+#: wp-events.php:634 wp-events.php:665 wp-events.php:697 wp-events.php:702
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "optional"
+msgstr "opsiyonel"
+
+#: wp-events.php:513
+msgid "Enddate"
+msgstr "Bitiş tarihi"
+
+#: wp-events.php:626
+msgid "Repeat"
+msgstr "Tekrar"
+
+#: wp-events.php:628
+msgid "Don't repeat"
+msgstr "Tekrarlama"
+
+#: wp-events.php:629
+msgid "Every day"
+msgstr "Her gün"
+
+#: wp-events.php:630
+msgid "Every week"
+msgstr "Her hafta"
+
+#: wp-events.php:631
+msgid "Every 4 Weeks"
+msgstr "Her ay"
+
+#: wp-events.php:632
+msgid "Every year"
+msgstr "Her yıl"
+
+#: wp-events.php:634
+msgid "This many times"
+msgstr "Tekrar sayısı"
+
+#: wp-events.php:665
+msgid "Location"
+msgstr "Yer"
+
+#: wp-events.php:666
+msgid "Maximum 255 characters."
+msgstr "En fazla 255 karakter."
+
+#: wp-events.php:675
+msgid "Show in the sidebar"
+msgstr "Kenar çubuğunda göster"
+
+#: wp-events.php:678 wp-events.php:682 wp-events.php:688 wp-events.php:692
+msgid "Yes"
+msgstr "Evet"
+
+#: wp-events.php:679 wp-events.php:681 wp-events.php:689 wp-events.php:691
+msgid "No"
+msgstr "Hayır"
+
+#: wp-events.php:685
+msgid "Archive this event"
+msgstr "Bu etkinliği arşivle"
+
+#: wp-events.php:697
+msgid "Message when event ends"
+msgstr "Etkinlik bitiminde mesaj yayınla"
+
+#: wp-events.php:699
+msgid "HTML allowed"
+msgstr "HTML izinli"
+
+#: wp-events.php:702
+msgid "Link to page"
+msgstr "Sayfaya link"
+
+#: wp-events.php:704
+msgid "Include full url and http://, this can be any page."
+msgstr "Tüm url yi (http:// dahil) girin, herhangi bir sayfa olabilir. "
+
+#: wp-events.php:704
+msgid "Required if checkbox above is checked!"
+msgstr "Yukarıdaki kutucuk işaretli ise doldurulmalı! (başlığı link yap)"
+
+#: wp-events.php:713
+msgid "Save as Duplicate"
+msgstr ""
+
+#: wp-events.php:725
+msgid ""
+"Tip: If you do not want to use categories create one \"uncategorized\" and "
+"put all events in there. You don't have to show the categories on your blog."
+msgstr ""
+"İpucu: Eğer kategorileri kullanmak istemiyorsanız \"varsayılan\" adında bir "
+"kategori oluşturup, etkinlikleri ona ekleyin. Sitenizde kategorileri "
+"göstermenize gerek yok."
+
+#: wp-events.php:732
+msgid "This is not an event created by you. Therefor you cannot edit it."
+msgstr ""
+"Bu etkinlik sizin tarafınızdan oluşturulmadı. Bu nedenle siz "
+"düzenleyemezsiniz."
+
+#: wp-events.php:760
+msgid "Events options"
+msgstr "Events seçenekleri"
+
+#: wp-events.php:765
+msgid "General"
+msgstr "Genel"
+
+#: wp-events.php:766 wp-events.php:1014
+msgid "Templates"
+msgstr "Temalar"
+
+#: wp-events.php:767 wp-events.php:1117
+msgid "Language"
+msgstr "Dil"
+
+#: wp-events.php:768
+msgid "Uninstall"
+msgstr "Kaldır"
+
+#: wp-events.php:774
+msgid "Main config"
+msgstr "Ana ayarlar"
+
+#: wp-events.php:780
+msgid "Options for the sidebar and widget"
+msgstr "Kenar çubuğu ve bileşen seçenekleri"
+
+#: wp-events.php:785
+msgid "Show this many events"
+msgstr "Gösterilecek etkinlik sayısı"
+
+#: wp-events.php:789
+msgid "Show"
+msgstr "Göster"
+
+#: wp-events.php:791
+msgid "Future events including events that happen today"
+msgstr "Gelecek etkinlikler, bugün gerçekleşenleride kapsar"
+
+#: wp-events.php:792
+msgid "Events that didn't start yet"
+msgstr "Henüz başlamamış etkinlikler"
+
+#: wp-events.php:793
+msgid "Events that didn't end yet"
+msgstr "Henüz birmemiş etkinlikler"
+
+#: wp-events.php:794
+msgid "The archive"
+msgstr "Arşiv"
+
+#: wp-events.php:795
+msgid "Just today's events"
+msgstr "Günün etkinlikleri"
+
+#: wp-events.php:796
+msgid "The next 7 days"
+msgstr "Gelecek 7 günün etkinlikleri"
+
+#: wp-events.php:797
+msgid "Upcoming and/or Archived events"
+msgstr "Gelecek ve/veya Arşivlenmiş etkinlikler"
+
+#: wp-events.php:801 wp-events.php:861
+msgid "Date format"
+msgstr "Tarih formatı"
+
+#: wp-events.php:812 wp-events.php:872
+msgid "Weekday"
+msgstr "Haftaiçi"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Careful what you put here!"
+msgstr "Lütfen buraya girdiğinize dikkat edin!"
+
+#: wp-events.php:817 wp-events.php:877
+msgid "Make your own date formats"
+msgstr ""
+
+#: wp-events.php:817 wp-events.php:877
+msgid "manual"
+msgstr ""
+
+#: wp-events.php:819 wp-events.php:879
+msgid "Date system"
+msgstr "Tarih sistemi"
+
+#: wp-events.php:828 wp-events.php:888
+msgid "Save options to see the result!"
+msgstr "Ayarları kayıt etmelisiniz!"
+
+#: wp-events.php:831 wp-events.php:891
+msgid "Time format"
+msgstr "Zaman formatı"
+
+#: wp-events.php:833 wp-events.php:893
+msgid "24-hour clock"
+msgstr "24-saat"
+
+#: wp-events.php:836 wp-events.php:896
+msgid "12-hour clock"
+msgstr "12-saat"
+
+#: wp-events.php:842 wp-events.php:902
+msgid "Date parsing"
+msgstr "Bitiş tarihi"
+
+#: wp-events.php:844
+msgid "Never show the ending date/time (Default)"
+msgstr "Bitiş tarihini/zamanını asla gösterme (Varsayılan)"
+
+#: wp-events.php:845 wp-events.php:904
+msgid "Hide the ending date if it's the same as the starting date"
+msgstr "Bitiş tarihi başlangıç tarihi ile aynıysa gösterme"
+
+#: wp-events.php:846 wp-events.php:905
+msgid "Show the ending date even if it's the same as the starting date"
+msgstr "Bitiş tarihi başlangıç tarihi ile aynı olsa bile göster"
+
+#: wp-events.php:850 wp-events.php:909
+msgid "Character limit"
+msgstr "Karakter sınırı"
+
+#: wp-events.php:856
+msgid "Options for the page lists"
+msgstr "Sayfa listesi seçenekleri"
+
+#: wp-events.php:915
+msgid "Global or other options"
+msgstr "Genel ve diğer seçenekler"
+
+#: wp-events.php:920
+msgid "Order events"
+msgstr "Etkinlikleri sırala"
+
+#: wp-events.php:926 wp-events.php:927 wp-events.php:941 wp-events.php:942
+msgid "by author"
+msgstr "oluşturana göre"
+
+#: wp-events.php:930 wp-events.php:931 wp-events.php:945 wp-events.php:946
+msgid "by description"
+msgstr "tanıma göre"
+
+#: wp-events.php:935
+msgid "Order archive"
+msgstr "Arşivi düzenle"
+
+#: wp-events.php:950
+msgid "Links open in"
+msgstr "Link açılışı"
+
+#: wp-events.php:952
+msgid "new window"
+msgstr "yeni pencere"
+
+#: wp-events.php:953
+msgid "same window"
+msgstr "aynı pencere"
+
+#: wp-events.php:954
+msgid "parent window"
+msgstr "parent pencere"
+
+#: wp-events.php:960
+msgid "User Access"
+msgstr "Kullanıcı Erişimi"
+
+#: wp-events.php:965
+msgid ""
+"Set these options to prevent certain userlevels from editing, creating or "
+"deleting events. The options panel user level cannot be changed."
+msgstr ""
+"Bu ayarları kullanarak sistemdeki üye seviyelerinin, etkinlikler üzerindeki "
+"yetkileri düzenleyebilirsiniz. Bu ayar panelinin yetki seviyesi "
+"değiştirilemez."
+
+#: wp-events.php:965
+#, php-format
+msgid "For more information on user roles go to <a href=\"%s\">the codex</a>."
+msgstr ""
+"Üye rol ve yetkileri ile ilgili daha fazla bilgi için <a href=\"%s"
+"\">dökümanları</a> inceleyebilirsiniz."
+
+#: wp-events.php:968
+msgid "Add Events"
+msgstr "Etkinlik ekleme"
+
+#: wp-events.php:970 wp-events.php:980 wp-events.php:990 wp-events.php:1000
+msgid "Administrator"
+msgstr "Yönetici"
+
+#: wp-events.php:971 wp-events.php:981 wp-events.php:991 wp-events.php:1001
+msgid "Editor"
+msgstr "Editör"
+
+#: wp-events.php:972 wp-events.php:982 wp-events.php:992 wp-events.php:1002
+msgid "Author"
+msgstr "Yazar"
+
+#: wp-events.php:973 wp-events.php:983 wp-events.php:993 wp-events.php:1003
+msgid "Contributor"
+msgstr "İçerik Sağlayıcı"
+
+#: wp-events.php:974 wp-events.php:984 wp-events.php:994 wp-events.php:1004
+msgid "Subscriber"
+msgstr "Abone"
+
+#: wp-events.php:975
+msgid "Can add events and edit events they created."
+msgstr "Etkinlik ekleyebilir ve eklediklerini düzenleyebilirler."
+
+#: wp-events.php:978
+msgid "Edit events"
+msgstr "Etkinlik düzenleme"
+
+#: wp-events.php:985
+msgid "Can add/edit/review anyone's events."
+msgstr "Etkinlik ekleyebilir, başkalarınınkini değiştirip, düzenleyebilir."
+
+#: wp-events.php:988
+msgid "Manage events"
+msgstr "Etkinlik yönetimi"
+
+#: wp-events.php:995
+msgid "Can add/edit/review/delete anyone's events."
+msgstr ""
+"Etkinlik ekleyebilir, başkalarınınkini değiştirip, düzenleyip, silebilir."
+
+#: wp-events.php:998
+msgid "Manage categories"
+msgstr "Kategori yönetimi"
+
+#: wp-events.php:1005
+msgid "Can add/remove categories."
+msgstr "Kategori ekleyip, silebilir."
+
+#: wp-events.php:1009
+msgid "Update Options"
+msgstr "Ayarları Güncelle"
+
+#: wp-events.php:1021
+msgid "Sidebar and widget"
+msgstr "Kenar çubuğu ve bileşen"
+
+#: wp-events.php:1026 wp-events.php:1044 wp-events.php:1067 wp-events.php:1090
+msgid "Header"
+msgstr "Başlık"
+
+#: wp-events.php:1029 wp-events.php:1052 wp-events.php:1075 wp-events.php:1098
+msgid "Body"
+msgstr "Gövde"
+
+#: wp-events.php:1030 wp-events.php:1045 wp-events.php:1053 wp-events.php:1068
+#: wp-events.php:1076 wp-events.php:1091 wp-events.php:1099
+msgid "Options"
+msgstr "Seçenekler"
+
+#: wp-events.php:1033 wp-events.php:1056 wp-events.php:1079 wp-events.php:1102
+msgid "Footer"
+msgstr "Taban"
+
+#: wp-events.php:1039 wp-events.php:1062 wp-events.php:1085
+msgid "Page"
+msgstr "Sayfa"
+
+#: wp-events.php:1039
+msgid "main list"
+msgstr "ana liste"
+
+#: wp-events.php:1039
+msgid "Week"
+msgstr "Hafta"
+
+#: wp-events.php:1039
+msgid "7 days ahead"
+msgstr "7 gün ileri"
+
+#: wp-events.php:1048 wp-events.php:1071 wp-events.php:1094
+msgid "Default title"
+msgstr "Varsayılan başlık"
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "This only works if you use %category% in the header."
+msgstr "Bu seçenek yanlızca başlıkda %category% kullanıldıysa çalışacaktır."
+
+#: wp-events.php:1049 wp-events.php:1072 wp-events.php:1095
+msgid "No HTML allowed."
+msgstr "HTML kullanılamaz."
+
+#: wp-events.php:1062
+msgid "archive list"
+msgstr "arşiv listesi"
+
+#: wp-events.php:1085
+msgid "today's list"
+msgstr "günün listesi"
+
+#: wp-events.php:1106
+msgid "Location separator"
+msgstr "Yer ayıracı"
+
+#: wp-events.php:1107
+msgid "Can be text also."
+msgstr "Yazıda kullanılabilir."
+
+#: wp-events.php:1107
+msgid "Ending spaces allowed."
+msgstr "Sonda boşluk kullanabilirsiniz."
+
+#: wp-events.php:1112
+msgid "Update Templates"
+msgstr "Temaları Güncelle"
+
+#: wp-events.php:1122
+msgid "Today"
+msgstr "Bugün"
+
+#: wp-events.php:1126
+msgid "Hours"
+msgstr "Saat"
+
+#: wp-events.php:1138
+msgid "Days"
+msgstr "Gün"
+
+#: wp-events.php:1142
+msgid "And"
+msgstr "ve"
+
+#: wp-events.php:1146
+msgid "On"
+msgstr "Tarih:"
+
+#: wp-events.php:1150
+msgid "In"
+msgstr "Kalan:"
+
+#: wp-events.php:1154
+msgid "Ago"
+msgstr "Önce"
+
+#: wp-events.php:1158
+msgid "Sidebar link"
+msgstr "Kenar çubuğu linki"
+
+#: wp-events.php:1162
+msgid "Page link"
+msgstr "Sayfa linki"
+
+#: wp-events.php:1166
+msgid "If there are no events to show"
+msgstr "gösterilecek etkinlik yoksa"
+
+#: wp-events.php:1170
+msgid "If the event already happened"
+msgstr "etkinlik gerçekleşmişse"
+
+#: wp-events.php:1174
+msgid "If there are no events today"
+msgstr "bugün etkinlik yoksa"
+
+#: wp-events.php:1178
+msgid "If the archive is empty"
+msgstr "arşiv boşsa"
+
+#: wp-events.php:1182
+msgid "If there is an error"
+msgstr "bir hata varsa"
+
+#: wp-events.php:1186
+msgid "If no duration is set for an event"
+msgstr "etkinlik için süre belirtilmemişse"
+
+#: wp-events.php:1190
+msgid "If event is an all-day event"
+msgstr "etkinlikler tam-gün etkinliğiyse"
+
+#: wp-events.php:1196
+msgid "Update Language"
+msgstr "Dil Ayarlarını Güncelle"
+
+#: wp-events.php:1203
+msgid "Uninstaller"
+msgstr "Kaldırıcı"
+
+#: wp-events.php:1208
+msgid ""
+"Events installs a table in MySQL. When you disable the plugin the table will "
+"not be deleted. To delete the table use the button below."
+msgstr ""
+"Events MySQL'e tablo yükler. Eklentiyi etkisizleştirip sildiğinizde tablo "
+"silinmez. Tabloyu silmek için aşağıdaki butonu kullanınız."
+
+#: wp-events.php:1211
+msgid ""
+"This process is irreversible and will delete ALL scheduled events and "
+"associated options!"
+msgstr ""
+"Bu işlem geri çevirilemez ve tüm programlanmış etkinliklerinizi, bağlantılı "
+"tüm ayar ve seçeneklerinizle birlikde silecektir!"
+
+#: wp-events.php:1216
+msgid "You are about to uninstall the events plugin"
+msgstr "Events eklentisini kaldırmak üzeresiniz"
+
+#: wp-events.php:1216
+msgid "All scheduled events will be lost!"
+msgstr "Tüm programlanmış etkinlikler ve ayarlarınız silinecek!"
+
+#: wp-events.php:1216
+msgid "Uninstall Events"
+msgstr "Events'ı kaldır"
+
+#~ msgid "Events for Excellent!"
+#~ msgstr "Mükemmellik için Events!"
+
+#~ msgid "Like my software? <a href=\"%s\">Show your appreciation</a>. Thanks!"
+#~ msgstr ""
+#~ "Yazılımımı beğendinizmi? <a href=\"%s\">Taktirinizi gösterin</a>. "
+#~ "Teşekkürler!"
+
+#~ msgid "Preferred by locale"
+#~ msgstr "Yerel tercihli"
+
+#~ msgid "Learn"
+#~ msgstr "Öğren"
+
+#~ msgid "php manual"
+#~ msgstr "php klavuzu"
+
+#~ msgid "Find me on <a href=\"%s\">%s</a>."
+#~ msgstr "Beni burada bulabilirsiniz: <a href=\"%s\">%s</a>."
+
+#~ msgid ""
+#~ "The plugin page at <a href=\"%s\">%s</a>. Getting started, manuals and "
+#~ "more..."
+#~ msgstr ""
+#~ "Eklenti sayfası: <a href=\"%s\">%s</a> Bu adreste. Klavuzlar, yönergeler "
+#~ "ve daha fazlası ile birlikte..."
+
+#~ msgid "<a href=\"%s\">%s</a> for updates and notes about Events!"
+#~ msgstr "<a href=\"%s\">%s</a> Events güncellemeleri ve notları için!"
+
+#~ msgid "Need help? <a href=\"%s\">%s</a>. Use the knowledgebase!"
+#~ msgstr "Yardımmı lazım? <a href=\"%s\">%s</a>. Bilgi bankasını kullanın!"
+
+#~ msgid "Translation: ---"
+#~ msgstr ""
+#~ "Türkçe'ye çeviren: Hasan Mücahit BULUT | <a href=\"http://heartcoder.net"
+#~ "\" target=\"_blank\" title=\"codes art with heart\">heArt coder</a>"
+
+#~ msgid "Want Events in your language? Check <a href=\"%s\">here</a>!"
+#~ msgstr "Events sizin dilinizde olsun istiyorsanız: <a href=\"%s\">here</a>!"
+
+#~ msgid "Untitled"
+#~ msgstr "Adsız"
+
+#~ msgid ""
+#~ "The MySQL table was not properly upgraded! Events cannot work properly "
+#~ "without this upgrade. Check your MySQL permissions and see if you have "
+#~ "ALTER rights (rights to alter existing tables)."
+#~ msgstr ""
+#~ "MySQL tablosu düzgün güncellenemedi! Events düzgün çalışmayacaktır. MySQL "
+#~ "izinlerinizi kontrol edin ve ALTER izinlerine sahip olduğunuzdan emin "
+#~ "olun (varolan tabloları değiştirme izinleri)."
+
+#~ msgid "and mention any errors you saw/got and explain what you were doing!"
+#~ msgstr ""
+#~ "ayrıca gördüğünüz/karşılaştığınız tüm hataları ve o anlarda tam olarak ne "
+#~ "yaptığınızı anlatmayı unutmayın!"
+
+#~ msgid "An unexpected error occured"
+#~ msgstr "Beklenmeyen bir hata oluştu"
+
+#~ msgid "Duplicate event"
+#~ msgstr "Etkinliği kopyala"
